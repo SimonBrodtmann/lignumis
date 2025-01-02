@@ -65,11 +65,19 @@ data:extend({
             }
         },
         prerequisites = { "planet-discovery-nauvis" },
-        research_trigger = {
-            type = "craft-item",
-            item = "iron-ore",
-            count = 10
+        unit = {
+            count = 50,
+            ingredients = {
+                { "wood-science-pack",  1 },
+                { "steam-science-pack", 1 }
+            },
+            time = 15
         }
+        --research_trigger = {
+        --    type = "craft-item",
+        --    item = "iron-ore",
+        --    count = 10
+        --}
     },
     {
         type = "technology",
@@ -88,11 +96,19 @@ data:extend({
             }
         },
         prerequisites = { "planet-discovery-nauvis" },
-        research_trigger = {
-            type = "craft-item",
-            item = "copper-ore",
-            count = 10
+        unit = {
+            count = 50,
+            ingredients = {
+                { "wood-science-pack",  1 },
+                { "steam-science-pack", 1 }
+            },
+            time = 15
         }
+        --research_trigger = {
+        --    type = "craft-item",
+        --    item = "copper-ore",
+        --    count = 10
+        --}
     },
     {
         type = "technology",

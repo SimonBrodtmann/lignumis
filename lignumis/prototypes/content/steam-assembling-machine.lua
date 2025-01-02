@@ -11,8 +11,14 @@ assembling_machine.resistances = nil
 assembling_machine.graphics_set = util.copy(data.raw["assembling-machine"]["assembling-machine-1"].graphics_set)
 assembling_machine.graphics_set.animation.layers[1].filename =
 "__lignumis__/graphics/entity/steam-assembling-machine.png"
-assembling_machine.crafting_categories = { "crafting", "basic-crafting", "organic-or-assembling",
-    "wood-processing-or-assembling", "crafting-with-fluid" }
+assembling_machine.crafting_categories = {
+    "crafting",
+    "basic-crafting",
+    "organic-or-assembling",
+    "wood-processing-or-assembling",
+    "crafting-with-fluid",
+    "crafting-or-carpentry"
+}
 assembling_machine.crafting_speed = 0.5
 assembling_machine.energy_usage = "25kW"
 assembling_machine.energy_source = {

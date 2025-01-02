@@ -5,12 +5,17 @@ assembling_machine.name = "burner-assembling-machine"
 assembling_machine.icon = "__lignumis__/graphics/icons/burner-assembling-machine.png"
 assembling_machine.minable.result = "burner-assembling-machine"
 assembling_machine.next_upgrade = "steam-assembling-machine"
-assembling_machine.corpses = "burner-assembling-machine-remnants"
+assembling_machine.corpse = "burner-assembling-machine-remnants"
 assembling_machine.resistances = nil
 assembling_machine.graphics_set.animation.layers[1].filename =
 "__lignumis__/graphics/entity/burner-assembling-machine.png"
-assembling_machine.crafting_categories = { "crafting", "basic-crafting", "organic-or-assembling",
-    "wood-processing-or-assembling" }
+assembling_machine.crafting_categories = {
+    "crafting",
+    "basic-crafting",
+    "organic-or-assembling",
+    "wood-processing-or-assembling",
+    "crafting-or-carpentry"
+}
 assembling_machine.crafting_speed = 0.25
 assembling_machine.energy_source = {
     type = "burner",

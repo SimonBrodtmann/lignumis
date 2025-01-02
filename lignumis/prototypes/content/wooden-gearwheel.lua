@@ -7,7 +7,7 @@ data:extend({
         name = "wooden-gear-wheel",
         icon = "__lignumis__/graphics/icons/wooden-gear-wheel.png",
         subgroup = "intermediate-product",
-        order = "a[basic-intermediates]-a[wooden-gear-wheel]",
+        order = "a[basic-intermediates]-0[wooden-gear-wheel]",
         inventory_move_sound = item_sounds.wood_inventory_move,
         pick_sound = item_sounds.wood_inventory_pickup,
         drop_sound = item_sounds.wood_inventory_move,

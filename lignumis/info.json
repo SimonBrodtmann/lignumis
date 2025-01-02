@@ -1,6 +1,6 @@
 {
    "name": "lignumis",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "title": "Lignumis",
    "description": "Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies.",
    "author": "cackling fiend",
@@ -14,7 +14,6 @@
       "wood-logistics >= 2.1.1",
       "Burner-Leech-Fork >= 1.0.0",
       "mf-buildings >= 0.1.0",
-      "mf-logistics >= 0.1.0",
-      "wood-to-landfill-spaceage >= 1.0.2"
+      "mf-logistics >= 0.1.0"
    ]
 }

@@ -11,13 +11,15 @@ long_handed_inserter.hand_base_picture.filename = "__lignumis__/graphics/entity/
 long_handed_inserter.hand_closed_picture.filename = "__lignumis__/graphics/entity/burner-long-handed-inserter-hand-closed.png"
 long_handed_inserter.hand_open_picture.filename = "__lignumis__/graphics/entity/burner-long-handed-inserter-hand-open.png"
 long_handed_inserter.platform_picture.sheet.filename = "__lignumis__/graphics/entity/burner-long-handed-inserter-platform.png"
-long_handed_inserter.energy_per_movement = "90kJ"
-long_handed_inserter.energy_per_rotation = "90kJ"
+long_handed_inserter.energy_per_movement = "100kJ"
+long_handed_inserter.energy_per_rotation = "100kJ"
 long_handed_inserter.energy_source = {
     type = "burner",
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
+    initial_fuel = "wood",
+    initial_fuel_percent = 0.5,
     light_flicker = { color = { 0, 0, 0 } },
     smoke = {
         {
@@ -48,7 +50,7 @@ data:extend({
         icon = "__lignumis__/graphics/icons/burner-long-handed-inserter.png",
         subgroup = "inserter",
         color_hint = { text = "L" },
-        order = "c[0-burner-long-handed-inserter]",
+        order = "b0[burner-long-handed-inserter]",
         inventory_move_sound = item_sounds.inserter_inventory_move,
         pick_sound = item_sounds.inserter_inventory_pickup,
         drop_sound = item_sounds.inserter_inventory_move,

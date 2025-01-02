@@ -13,7 +13,7 @@ stromatolite.mining_time = 2
 stromatolite.minable.results = {
     { type = "item", name = "gold-ore",               amount_min = 1, amount_max = 7 },
     { type = "item", name = "gold-bacteria",          amount_min = 3, amount_max = 9 },
-    { type = "item", name = "gold-stromatolite-seed", amount = 1,  probability = 0.1 }
+    { type = "item", name = "gold-stromatolite-seed", amount = 1,     probability = 0.1 }
 }
 stromatolite.map_color = { 255, 171, 0, 0.5 }
 stromatolite.pictures = {
@@ -174,6 +174,7 @@ local seed = {
         { size = 64, filename = "__lignumis__/graphics/icons/gold-stromatolite-seed-4.png", scale = 0.5, mipmap_count = 4 },
         { size = 64, filename = "__lignumis__/graphics/icons/gold-stromatolite-seed-5.png", scale = 0.5, mipmap_count = 4 }
     },
+    flags = { "always-show" },
     subgroup = "agriculture-processes",
     order = "a[seeds]-d[gold-stromatolite-seed]",
     plant_result = "gold-stromatolite-plant",
@@ -196,6 +197,7 @@ local bacteria = {
         { size = 64, filename = "__lignumis__/graphics/icons/gold-bacteria-2.png", scale = 0.5, mipmap_count = 4 },
         { size = 64, filename = "__lignumis__/graphics/icons/gold-bacteria-3.png", scale = 0.5, mipmap_count = 4 },
     },
+    flags = { "always-show" },
     subgroup = "agriculture-processes",
     order = "b[agriculture]-e[gold-bacteria]",
     inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,

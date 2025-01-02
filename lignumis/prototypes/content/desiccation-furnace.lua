@@ -32,7 +32,7 @@ local furnace_item = {
         { icon = "__base__/graphics/icons/fluid/steam.png", scale = 0.25, shift = { 8, -8 } }
     },
     subgroup = "smelting-machine",
-    order = "a[furnace]-ab[desiccation]",
+    order = "a[stone-furnace]-ab[desiccation]",
     inventory_move_sound = item_sounds.brick_inventory_move,
     pick_sound = item_sounds.brick_inventory_pickup,
     drop_sound = item_sounds.brick_inventory_move,

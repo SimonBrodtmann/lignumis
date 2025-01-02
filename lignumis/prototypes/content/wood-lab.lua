@@ -5,19 +5,17 @@ data:extend({
         type = "lab",
         name = "wood-lab",
         icon = "__lignumis__/graphics/icons/wood-lab.png",
-        flags = {"placeable-player", "player-creation"},
-        minable = {mining_time = 0.2, result = "wood-lab"},
+        flags = { "placeable-player", "player-creation" },
+        minable = { mining_time = 0.2, result = "wood-lab" },
         fast_replaceable_group = "lab",
         max_health = 150,
         corpse = "lab-remnants",
         dying_explosion = "lab-explosion",
-        collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-        selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+        collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
+        selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
         damaged_trigger_effect = util.copy(data.raw.lab["lab"].damaged_trigger_effect),
-        on_animation =
-        {
-            layers =
-            {
+        on_animation = {
+            layers = {
                 {
                     filename = "__lignumis__/graphics/entity/wood-lab.png",
                     width = 194,
@@ -63,10 +61,8 @@ data:extend({
                 }
             }
         },
-        off_animation =
-        {
-            layers =
-            {
+        off_animation = {
+            layers = {
                 {
                     filename = "__lignumis__/graphics/entity/wood-lab.png",
                     width = 194,
@@ -91,8 +87,7 @@ data:extend({
                 }
             }
         },
-        working_sound =
-        {
+        working_sound = {
             sound = { filename = "__base__/sound/lab.ogg", volume = 0.7, modifiers = { volume_multiplier("main-menu", 2.2), volume_multiplier("tips-and-tricks", 0.8) } },
             audible_distance_modifier = 0.7,
             fade_in_ticks = 4,
@@ -101,34 +96,30 @@ data:extend({
         impact_category = "wood",
         open_sound = { filename = "__base__/sound/open-close/lab-open.ogg", volume = 0.6 },
         close_sound = { filename = "__base__/sound/open-close/lab-close.ogg", volume = 0.6 },
-        energy_source =
-        {
+        energy_source = {
             type = "burner",
-            fuel_categories = {"chemical"},
+            fuel_categories = { "chemical" },
             effectivity = 1,
             fuel_inventory_size = 1,
             emissions_per_minute = { pollution = 12, noise = 1 },
-            light_flicker = {color = {0,0,0}},
-            smoke =
-            {
+            light_flicker = { color = { 0, 0, 0 } },
+            smoke = {
                 {
                     name = "smoke",
-                    deviation = {0.1, 0.1},
+                    deviation = { 0.1, 0.1 },
                     frequency = 3
                 }
             }
         },
         energy_usage = "150kW",
         researching_speed = 0.5,
-        inputs =
-        {
+        inputs = {
             "wood-science-pack",
             "steam-science-pack"
         },
-        icons_positioning =
-        {
-            {inventory_index = defines.inventory.lab_modules, shift = {0, 0.9}},
-            {inventory_index = defines.inventory.lab_input, shift = {0, 0}, max_icons_per_row = 4, separation_multiplier = 1/1.1}
+        icons_positioning = {
+            { inventory_index = defines.inventory.lab_modules, shift = { 0, 0.9 } },
+            { inventory_index = defines.inventory.lab_input,   shift = { 0, 0 }, max_icons_per_row = 4, separation_multiplier = 1 / 1.1 }
         },
     },
     {
@@ -136,7 +127,7 @@ data:extend({
         name = "wood-lab",
         icon = "__lignumis__/graphics/icons/wood-lab.png",
         subgroup = "production-machine",
-        order = "z[lab]",
+        order = "y0[lab]",
         inventory_move_sound = item_sounds.lab_inventory_move,
         pick_sound = item_sounds.lab_inventory_pickup,
         drop_sound = item_sounds.lab_inventory_move,
@@ -148,10 +139,10 @@ data:extend({
         name = "wood-lab",
         energy_required = 2,
         ingredients = {
-            { type = "item", name = "lumber", amount = 10 },
+            { type = "item", name = "lumber",            amount = 10 },
             { type = "item", name = "wooden-gear-wheel", amount = 10 },
-            { type = "item", name = "stone-brick", amount = 10 },
-            { type = "item", name = "gold-plate", amount = 20 }
+            { type = "item", name = "stone-brick",       amount = 10 },
+            { type = "item", name = "gold-plate",        amount = 20 }
         },
         results = { { type = "item", name = "wood-lab", amount = 1 } },
         enabled = false

@@ -42,6 +42,7 @@ pipe.icon = "__lignumis__/graphics/icons/gold-pipe.png"
 pipe.corpse = "gold-pipe-remnants"
 pipe.next_upgrade = "pipe"
 pipe.fluid_box.volume = 50
+pipe.minable.result = "gold-pipe"
 
 pipe.fluid_box.pipe_covers.north.layers[1].filename = "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-north.png"
 pipe.fluid_box.pipe_covers.east.layers[1].filename = "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-east.png"
@@ -126,6 +127,7 @@ pipe_to_ground.corpse = "gold-pipe-to-ground-remnants"
 pipe_to_ground.next_upgrade = "pipe-to-ground"
 pipe_to_ground.fluid_box.volume = 50
 pipe_to_ground.fluid_box.pipe_connections[2].max_underground_distance = 6
+pipe_to_ground.minable.result = "gold-pipe-to-ground"
 
 pipe_to_ground.fluid_box.pipe_covers.north.layers[1].filename =
 "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-north.png"

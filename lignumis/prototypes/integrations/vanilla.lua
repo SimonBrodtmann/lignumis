@@ -91,12 +91,12 @@ local electronics_technology = data.raw.technology["electronics"]
 electronics_technology.prerequisites = { "copper-processing" }
 electronics_technology.research_trigger = nil
 electronics_technology.unit = {
-    count = 10,
+    count = 50,
     ingredients = {
         { "wood-science-pack",  1 },
         { "steam-science-pack", 1 }
     },
-    time = 10
+    time = 15
 }
 
 local steam_power_technology = data.raw.technology["steam-power"]
@@ -108,5 +108,13 @@ steam_power_technology.unit = {
         { "wood-science-pack",  1 },
         { "steam-science-pack", 1 }
     },
+    time = 15
+}
+
+local landfill_technology = data.raw.technology["landfill"]
+landfill_technology.prerequisites = { "burner-automation" }
+landfill_technology.unit = {
+    count = 50,
+    ingredients = { { "wood-science-pack", 1 } },
     time = 15
 }

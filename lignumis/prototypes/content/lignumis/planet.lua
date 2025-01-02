@@ -40,7 +40,7 @@ data:extend({
         surface_properties = {
             ["day-night-cycle"] = 1 * minute
         },
-        steroid_spawn_influence = 1,
+        asteroid_spawn_influence = 1,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(nauvis_lignumis, 0.9),
         surface_render_parameters = {
             clouds = effects.default_clouds_effect_properties()

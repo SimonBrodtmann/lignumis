@@ -59,6 +59,7 @@ data:extend({
             { size = 64, filename = "__lignumis__/graphics/icons/gold-ore-2.png", scale = 0.5, mipmap_count = 4 },
             { size = 64, filename = "__lignumis__/graphics/icons/gold-ore-3.png", scale = 0.5, mipmap_count = 4 },
         },
+        flags = { "always-show" },
         subgroup = "raw-resource",
         order = "f[gold-ore]",
         inventory_move_sound = item_sounds.resource_inventory_move,

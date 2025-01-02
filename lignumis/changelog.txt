@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 02.01.2025
+  Changes:
+    - Add Basic gun turret
+    - Remove Wood to landfill
+    - Move vanilla landfill to Lignumis
+    - Prevent deadlock by not using Lignumis science packs after going to Nauvis
+  Bug Fixes:
+    - Fix some typos
+    - Fix item orders
+    - Fix crafting categories of assemblers
+    - Fix initial fuel for Long handed inserter
+    - Fix minable results for gold pipes
+    - Fix items not shown in filter selection
+    - Fix enemies not attacking

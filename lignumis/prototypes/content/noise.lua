@@ -18,6 +18,14 @@ data:extend({
 
 data.raw["unit-spawner"]["spitter-spawner"].absorptions_per_second.noise = { absolute = 20, proportional = 0.01 }
 data.raw["unit-spawner"]["biter-spawner"].absorptions_per_second.noise = { absolute = 20, proportional = 0.01 }
+data.raw["unit"]["small-biter"].absorptions_to_join_attack.noise = 4
+data.raw["unit"]["medium-biter"].absorptions_to_join_attack.noise = 20
+data.raw["unit"]["big-biter"].absorptions_to_join_attack.noise = 80
+data.raw["unit"]["behemoth-biter"].absorptions_to_join_attack.noise = 400
+data.raw["unit"]["small-spitter"].absorptions_to_join_attack.noise = 4
+data.raw["unit"]["medium-spitter"].absorptions_to_join_attack.noise = 12
+data.raw["unit"]["big-spitter"].absorptions_to_join_attack.noise = 30
+data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.noise = 200
 
 for _, tree in pairs(data.raw.tree) do
     if tree.emissions_per_second then
