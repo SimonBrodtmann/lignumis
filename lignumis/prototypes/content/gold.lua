@@ -1,0 +1,5 @@
+require("gold/stromatolite")
+require("gold/tiles")
+require("gold/resource")
+require("gold/intermediates")
+require("gold/pipes")
