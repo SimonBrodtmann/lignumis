@@ -16,5 +16,6 @@ require("steam-science")
 require("wood-liquefaction")
 require("wooden-rocket-silo")
 require("basic-gun-turret")
+require("basic-construction-robots")
 
 require("noise")

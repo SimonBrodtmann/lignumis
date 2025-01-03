@@ -5,7 +5,7 @@ data:extend({
     {
         type = "tool",
         name = "steam-science-pack",
-        localised_description = {"item-description.science-pack"},
+        localised_description = { "item-description.science-pack" },
         icon = "__lignumis__/graphics/icons/steam-science-pack.png",
         subgroup = "science-pack",
         color_hint = { text = "A" },
@@ -28,8 +28,8 @@ data:extend({
         enabled = false,
         energy_required = 20,
         ingredients = {
-            { type = "item", name = "gold-plate", amount = 2 },
-            { type = "fluid", name = "steam", amount = 10 }
+            { type = "item",  name = "gold-plate", amount = 2 },
+            { type = "fluid", name = "steam",      amount = 10 }
         },
         results = { { type = "item", name = "steam-science-pack", amount = 2 } },
         crafting_machine_tint = {
@@ -37,5 +37,24 @@ data:extend({
             secondary = { r = 0.65, g = 0.27, b = 0.18, a = 1.000 },
         },
         allow_productivity = true
+    },
+    {
+        type = "technology",
+        name = "steam-science-pack",
+        icon = "__lignumis__/graphics/technology/steam-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "steam-science-pack"
+            }
+        },
+        prerequisites = { "steam-automation" },
+        unit = {
+            count = 20,
+            ingredients = { { "wood-science-pack", 1 } },
+            time = 15
+        }
     }
 })

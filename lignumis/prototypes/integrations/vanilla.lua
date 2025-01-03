@@ -16,8 +16,8 @@ drill_item.icon = "__lignumis__/graphics/icons/burner-mining-drill.png"
 local drill_recipe = data.raw["recipe"]["burner-mining-drill"]
 drill_recipe.ingredients = {
     { type = "item", name = "wooden-gear-wheel", amount = 3 },
-    { type = "item", name = "stone-furnace", amount = 1 },
-    { type = "item", name = "lumber", amount = 3 }
+    { type = "item", name = "stone-furnace",     amount = 1 },
+    { type = "item", name = "lumber",            amount = 3 }
 }
 
 
@@ -34,7 +34,7 @@ data.raw.item["burner-inserter"].icon = "__lignumis__/graphics/icons/burner-inse
 
 data.raw.recipe["burner-inserter"].ingredients = {
     { type = "item", name = "wooden-gear-wheel", amount = 1 },
-    { type = "item", name = "lumber", amount = 1 }
+    { type = "item", name = "lumber",            amount = 1 }
 }
 
 
@@ -118,3 +118,49 @@ landfill_technology.unit = {
     ingredients = { { "wood-science-pack", 1 } },
     time = 15
 }
+
+local robots_speed_technology_1 = data.raw.technology["worker-robots-speed-1"]
+robots_speed_technology_1.prerequisites = { "provisional-rocketry", "basic-construction-robotics-gold" }
+robots_speed_technology_1.unit = {
+    count = 100,
+    ingredients = { { "wood-science-pack", 1 }, { "steam-science-pack", 1 } },
+    time = 15
+}
+
+local robots_speed_technology_2 = data.raw.technology["worker-robots-speed-2"]
+robots_speed_technology_2.prerequisites = {
+    "worker-robots-speed-1",
+    "logistic-science-pack"
+}
+robots_speed_technology_2.unit = {
+    count = 100,
+    ingredients = { { "automation-science-pack", 1 }, { "logistic-science-pack", 1 } },
+    time = 30
+}
+
+local robots_speed_technology_3 = data.raw.technology["worker-robots-speed-3"]
+robots_speed_technology_3.prerequisites = { "worker-robots-speed-2", "chemical-science-pack" }
+robots_speed_technology_3.unit = {
+    count = 150,
+    ingredients = { { "automation-science-pack", 1 }, { "logistic-science-pack", 1 }, { "chemical-science-pack", 1 } },
+    time = 30
+}
+
+local robots_speed_technology_4 = data.raw.technology["worker-robots-speed-4"]
+robots_speed_technology_4.prerequisites = { "worker-robots-speed-3", "utility-science-pack" }
+robots_speed_technology_4.unit.ingredients = {
+    { "automation-science-pack", 1 },
+    { "logistic-science-pack",   1 },
+    { "chemical-science-pack",   1 },
+    { "utility-science-pack",    1 }
+}
+
+
+-- Equipment
+
+data.raw.armor["light-armor"].equipment_grid = "tiny-equipment-grid"
+data.raw.armor["heavy-armor"].equipment_grid = "very-small-equipment-grid"
+data.raw["equipment-grid"]["small-equipment-grid"].width = 6
+data.raw["equipment-grid"]["small-equipment-grid"].height = 6
+data.raw["equipment-grid"]["medium-equipment-grid"].width = 8
+data.raw["equipment-grid"]["medium-equipment-grid"].height = 8

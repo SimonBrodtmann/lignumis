@@ -6,7 +6,7 @@ Dive into the world of Lignumis, a moon of Nauvis offering only the most basic t
  - Move wood and lumber to its own fuel category
  - Make seeds burnable again
  - Make rocket silo work (incl. transition to Nauvis)
- - Add ammo turret
+ - ~~Add ammo turret~~
  - Add recipe for moist stromatolite remnants for regular furnace
  - ~~Make enemies work~~
  - Make mod "Wooden logistics" optional
@@ -51,3 +51,7 @@ planetfall (https://mods.factorio.com/mod/ThemTharHills)
 CG-Matt (https://mods.factorio.com/mod/simple-wood-liquefaction)
 
  - Wood liquefaction
+
+daydev (https://mods.factorio.com/mod/EquipmentPlusPortableEngine)
+
+ - Portable engine

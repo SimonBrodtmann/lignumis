@@ -1,30 +1,6 @@
 data:extend({
     {
         type = "technology",
-        name = "wood-science-pack",
-        icon = "__lignumis__/graphics/technology/wood-science-pack.png",
-        icon_size = 256,
-        essential = true,
-        effects =
-        {
-            {
-                type = "unlock-recipe",
-                recipe = "wood-lab"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "wood-science-pack"
-            }
-        },
-        research_trigger =
-        {
-            type = "craft-item",
-            item = "lumber",
-            count = 10
-        }
-    },
-    {
-        type = "technology",
         name = "planet-discovery-nauvis",
         icons = util.technology_icon_constant_planet("__lignumis__/graphics/technology/nauvis.png"),
         icon_size = 256,
@@ -73,11 +49,6 @@ data:extend({
             },
             time = 15
         }
-        --research_trigger = {
-        --    type = "craft-item",
-        --    item = "iron-ore",
-        --    count = 10
-        --}
     },
     {
         type = "technology",
@@ -104,11 +75,6 @@ data:extend({
             },
             time = 15
         }
-        --research_trigger = {
-        --    type = "craft-item",
-        --    item = "copper-ore",
-        --    count = 10
-        --}
     },
     {
         type = "technology",
@@ -138,25 +104,6 @@ data:extend({
                 recipe = "moist-stromatolite-remnant-desiccation"
             }
         },
-        unit = {
-            count = 20,
-            ingredients = { { "wood-science-pack", 1 } },
-            time = 15
-        }
-    },
-    {
-        type = "technology",
-        name = "steam-science-pack",
-        icon = "__lignumis__/graphics/technology/steam-science-pack.png",
-        icon_size = 256,
-        essential = true,
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "steam-science-pack"
-            }
-        },
-        prerequisites = { "steam-automation" },
         unit = {
             count = 20,
             ingredients = { { "wood-science-pack", 1 } },
