@@ -21,8 +21,14 @@ DeepMiner.RecipeBuilder:new()
     :apply()
 
 DeepMiner.TechnologyBuilder:new()
-    :prerequisites({ "automation-science-pack" })
+    :prerequisites({ "space-science-pack" })
     :count(500)
-    :ingredients({ { "automation-science-pack", 1 } })
+    :ingredients({
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack", 1 },
+        { "chemical-science-pack", 1 },
+        { "production-science-pack", 1 },
+        { "space-science-pack", 1 }
+    })
     :time(60)
     :apply()
