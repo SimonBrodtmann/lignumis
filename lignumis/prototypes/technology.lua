@@ -5,11 +5,22 @@ data:extend({
         icons = util.technology_icon_constant_planet("__lignumis__/graphics/technology/nauvis.png"),
         icon_size = 256,
         essential = true,
-        effects = { {
-            type = "unlock-space-location",
-            space_location = "nauvis",
-            use_icon_overlay_constant = true
-        } },
+        effects = {
+            {
+                type = "unlock-space-location",
+                space_location = "nauvis",
+                use_icon_overlay_constant = true
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "destination-nauvis"
+            },
+            {
+                type = "unlock-space-platforms",
+                modifier = true,
+                hidden = true
+            }
+        },
         prerequisites = { "provisional-rocketry" },
         unit = {
             count = 100,
@@ -121,10 +132,6 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "provisional-rocket-silo"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "satellite"
             }
         },
         prerequisites = { "wood-liquefaction" },

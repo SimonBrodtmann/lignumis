@@ -89,40 +89,6 @@ local rocket_part_recipe = {
     allow_productivity = true
 }
 
-local satellite_item = {
-    type = "item",
-    name = "satellite",
-    icon = "__base__/graphics/icons/satellite.png",
-    subgroup = "space-related",
-    order = "d[rocket-parts]-e[satellite]",
-    inventory_move_sound = item_sounds.mechanical_inventory_move,
-    pick_sound = item_sounds.mechanical_inventory_pickup,
-    drop_sound = item_sounds.mechanical_inventory_move,
-    stack_size = 1,
-    weight = 1 * tons,
-    rocket_launch_products = {{type = "item", name = "destination-nauvis", amount = 1}},
-    send_to_orbit_mode = "automated"
-}
-
-local satellite_recipe = {
-    type = "recipe",
-    name = "satellite",
-    energy_required = 5,
-    enabled = false,
-    category = "crafting",
-    ingredients =
-    {
-        { type = "item", name = "low-density-structure", amount = 100 },
-        { type = "item", name = "solar-panel",           amount = 100 },
-        { type = "item", name = "accumulator",           amount = 100 },
-        { type = "item", name = "radar",                 amount = 5 },
-        { type = "item", name = "processing-unit",       amount = 100 },
-        { type = "item", name = "rocket-fuel",           amount = 50 }
-    },
-    results = { { type = "item", name = "satellite", amount = 1 } },
-    requester_paste_multiplier = 1
-}
-
 local nauvis_item = {
     type = "item",
     name = "destination-nauvis",
@@ -133,7 +99,17 @@ local nauvis_item = {
     pick_sound = item_sounds.mechanical_inventory_pickup,
     drop_sound = item_sounds.mechanical_inventory_move,
     stack_size = 1,
-    weight = 1 * tons
+    weight = 1 * tons,
+    send_to_orbit_mode = "automated",
+    spoil_ticks = 60 * 60 * 10
+}
+
+local nauvis_recipe = {
+    type = "recipe",
+    name = "destination-nauvis",
+    enabled = false,
+    ingredients = {},
+    results = { { type = "item", name = "destination-nauvis", amount = 1 } }
 }
 
 data:extend({
@@ -142,7 +118,6 @@ data:extend({
     silo_recipe,
     rocket,
     rocket_part_recipe,
-    satellite_item,
-    satellite_recipe,
-    nauvis_item
+    nauvis_item,
+    nauvis_recipe
 })

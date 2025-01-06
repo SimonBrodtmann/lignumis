@@ -1,3 +1,5 @@
+require("script/to-nauvis")
+
 local crash_site = require("crash-site")
 local util = require("util")
 local e = defines.events
@@ -56,10 +58,6 @@ script.on_event(e.on_player_created, function(event)
         storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
         storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
 
-        log(serpent.block(storage.crashed_ship_items))
-        log(serpent.block(storage.crashed_debris_items))
-        log(serpent.block(storage.crashed_ship_parts))
-
         local ship_items = { ["wood-darts-magazine"] = 8 }
         local debris_items = { ["lumber"] = 8 }
 
@@ -89,10 +87,7 @@ local get_starting_message = function()
     if storage.custom_intro_message then
         return storage.custom_intro_message
     end
-    if script.active_mods["space-age"] then
-        return { "msg-intro-space-age" }
-    end
-    return { "msg-intro" }
+    return { "msg-intro-space-age" }
 end
 
 local function show_intro_message(player)
