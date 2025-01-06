@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
-Date: 03.01.2025
+Date: 06.01.2025
   Changes:
     - Add Basic construction robots
+    - Position Deep miner in technology tree
+    - Implement transition to Nauvis (temporary solution)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 02.01.2025
