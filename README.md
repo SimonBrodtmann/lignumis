@@ -20,16 +20,13 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Improve start on Nauvis
 - Add repair pack
 - Balance pollution (noise)
 - Tweak enemies + warfare (add damage research)
-- Add vent for steam
 - Adjust vanilla technologies
 - Add end-game stuff
 - Add burner radar
 - Balance resources
-- Force start with wooden ammo
 - Remove stromatolite (non-plant)?
 - Guarantee spawn of gold in starting area
 - Fix pipe graphics on desiccation furnace
@@ -44,7 +41,7 @@ Unsorted
 - Compatibility with hot metals
 - Compatibility with all wood mods from SafTheLamb
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
-- 
+- Optimize images
 
 ## Credits
 
