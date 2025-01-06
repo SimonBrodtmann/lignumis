@@ -20,8 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Move wood and lumber to its own fuel category
-- Make seeds burnable again
 - Add recipe for moist stromatolite remnants for regular furnace
 - Make mod "Wooden logistics" optional
 - Improve start on Nauvis

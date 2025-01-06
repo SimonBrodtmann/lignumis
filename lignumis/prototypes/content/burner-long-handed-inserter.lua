@@ -18,8 +18,8 @@ long_handed_inserter.energy_source = {
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
-    initial_fuel = "wood",
-    initial_fuel_percent = 0.5,
+    initial_fuel = "coal",
+    initial_fuel_percent = 0.25,
     light_flicker = { color = { 0, 0, 0 } },
     smoke = {
         {

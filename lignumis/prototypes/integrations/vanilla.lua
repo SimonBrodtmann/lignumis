@@ -29,6 +29,8 @@ burner_inserter.hand_base_picture.filename = "__lignumis__/graphics/entity/burne
 burner_inserter.hand_closed_picture.filename = "__lignumis__/graphics/entity/burner-inserter-hand-closed.png"
 burner_inserter.hand_open_picture.filename = "__lignumis__/graphics/entity/burner-inserter-hand-open.png"
 burner_inserter.platform_picture.sheet.filename = "__lignumis__/graphics/entity/burner-inserter-platform.png"
+burner_inserter.energy_source.initial_fuel = "coal"
+burner_inserter.energy_source.initial_fuel_percent = 0.15
 
 data.raw.item["burner-inserter"].icon = "__lignumis__/graphics/icons/burner-inserter.png"
 
@@ -43,10 +45,6 @@ data.raw.recipe["burner-inserter"].ingredients = {
 local wood_processing = data.raw.recipe["wood-processing"]
 wood_processing.ingredients[1].amount = 1
 wood_processing.icon = data.raw.item["tree-seed"].icon
-
-local tree_seed = data.raw.item["tree-seed"]
-tree_seed.fuel_category = nil
-tree_seed.fuel_value = nil
 
 for _, tree in pairs(data.raw.tree) do
     tree.minable.result = nil

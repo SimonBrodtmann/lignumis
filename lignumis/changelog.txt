@@ -3,6 +3,7 @@ Version: 0.0.4
 Date: 06.01.2025
   Changes:
     - The mod "Burner Leech Fork" is removed as a dependency and listed as optional addition in the description
+    - Add "wood fuel" category so burner entities don't use trees, lumber and seeds as fuel
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 06.01.2025

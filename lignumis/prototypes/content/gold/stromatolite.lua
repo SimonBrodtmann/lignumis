@@ -184,7 +184,9 @@ local seed = {
     drop_sound = space_age_item_sounds.agriculture_inventory_move,
     stack_size = 10,
     default_import_location = "lignumis",
-    weight = 10 * kg
+    weight = 10 * kg,
+    fuel_category = "wood",
+    fuel_value = "100kJ"
 }
 
 local bacteria = {
