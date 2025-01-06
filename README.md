@@ -76,3 +76,7 @@ Unsorted
 [daydev](https://mods.factorio.com/mod/EquipmentPlusPortableEngine)
 
 - Portable engine
+
+[Zithorian's Extra Storage Tanks](https://mods.factorio.com/mod/zithorian-extra-storage-tanks)
+
+- Gold storage tank
