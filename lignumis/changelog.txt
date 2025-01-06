@@ -6,6 +6,8 @@ Date: 06.01.2025
     - Add "wood fuel" category so burner entities don't use trees, lumber and seeds as fuel
     - Add recipe to process moist stromatolite remnant in a normal furnace to balance steam production
     - Add recipe to process gold stromatolite seeds to void excess seeds
+    - Improve transition to Nauvis and do some overall polishing
+    - The mod "wood-logistics" is now marked incompatible. All wood-themed mods from SafTheLamb will be made compatible at a later point.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 06.01.2025
