@@ -31,7 +31,7 @@ local function travel_to_nauvis()
     crash_site.create_crash_site(nauvis, { -5, -6 }, ship_items, debris_items, util.copy(crashed_ship_parts))
 end
 
-script.on_event(e.on_rocket_launch_ordered, function(event)
+script.on_event(e.on_rocket_launched, function(event)
     local rocket_silo = event.rocket_silo
     if rocket_silo.name == "provisional-rocket-silo" then
         --rocket_silo.destroy()
