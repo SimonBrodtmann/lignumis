@@ -16,8 +16,7 @@ assembling_machine.crafting_categories = {
     "basic-crafting",
     "organic-or-assembling",
     "wood-processing-or-assembling",
-    "crafting-with-fluid",
-    "crafting-or-carpentry"
+    "crafting-with-fluid"
 }
 assembling_machine.crafting_speed = 0.5
 assembling_machine.energy_usage = "25kW"

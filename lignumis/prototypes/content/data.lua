@@ -19,5 +19,7 @@ require("wooden-rocket-silo")
 require("basic-gun-turret")
 require("fuel-category")
 require("basic-construction-robots")
+require("lumber")
+require("wood-logistics")
 
 require("noise")

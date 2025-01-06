@@ -1,19 +1,19 @@
 {
-   "name": "lignumis",
-   "version": "0.0.3",
-   "title": "[Alpha] Lignumis",
-   "description": "Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies. Warning: This is an early development version. Breaking changes will happen.",
-   "author": "cackling fiend",
-   "homepage": "",
-   "factorio_version": "2.0",
-   "dependencies": [
-      "base",
-      "space-age >= 2.0.0",
-      "cf-lib >= 0.0.1",
-      "wood-military >= 2.0.0",
-      "Wood-Walls >= 1.2.0",
-      "wood-logistics >= 2.1.1",
-      "mf-buildings >= 0.1.0",
-      "mf-logistics >= 0.1.0"
-   ]
+    "name": "lignumis",
+    "version": "0.0.3",
+    "title": "[Alpha] Lignumis",
+    "description": "Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies. Warning: This is an early development version. Breaking changes will happen.",
+    "author": "cackling fiend",
+    "homepage": "",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base",
+        "space-age >= 2.0.0",
+        "cf-lib >= 0.0.1",
+        "wood-military >= 2.0.0",
+        "Wood-Walls >= 1.2.0",
+        "mf-buildings >= 0.1.0",
+        "mf-logistics >= 0.1.0",
+        "!wood-logistics"
+    ]
 }

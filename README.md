@@ -20,7 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Make mod "Wooden logistics" optional
 - Improve start on Nauvis
 - Balance pollution (noise)
 - Tweak enemies + warfare (add damage research)
@@ -78,3 +77,7 @@ Unsorted
 [Zithorian's Extra Storage Tanks](https://mods.factorio.com/mod/zithorian-extra-storage-tanks)
 
 - Gold storage tank
+
+[Wooden Basegame Assets](https://mods.factorio.com/mod/wood-base-assets)
+
+- Lumber

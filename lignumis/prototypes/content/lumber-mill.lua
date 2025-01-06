@@ -36,14 +36,9 @@ LumberMill.RecipeBuilder:new()
         category = "wood-processing-or-assembling"
     })
 
-local tech = LumberMill.TechnologyBuilder:new()
+LumberMill.TechnologyBuilder:new()
     :prerequisites({ "steam-science-pack" })
-    :build()
-
-tech.unit = {
-    count = 250,
-    ingredients = { { "wood-science-pack", 1 }, { "steam-science-pack", 1 } },
-    time = 15
-}
-
-data:extend({ tech })
+    :count(250)
+    :time(15)
+    :ingredients({ { "wood-science-pack", 1 }, { "steam-science-pack", 1 } })
+    :apply()
