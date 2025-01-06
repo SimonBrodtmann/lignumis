@@ -21,5 +21,6 @@ require("fuel-category")
 require("basic-construction-robots")
 require("lumber")
 require("wood-logistics")
+require("basic-repair-pack")
 
 require("noise")
