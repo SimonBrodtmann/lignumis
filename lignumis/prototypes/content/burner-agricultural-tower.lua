@@ -72,8 +72,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "stone-brick", amount = 5 },
             { type = "item", name = "wooden-gear-wheel", amount = 20 },
-            { type = "item", name = "lumber", amount = 20 },
-            { type = "item", name = "gold-plate", amount = 20 }
+            { type = "item", name = "lumber", amount = 20 }
         },
         results = { { type = "item", name = "burner-agricultural-tower", amount = 1 } },
         enabled = false
