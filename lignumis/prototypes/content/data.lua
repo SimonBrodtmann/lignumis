@@ -1,3 +1,4 @@
+require("technology")
 require("lignumis/planet")
 require("lignumis/autoplace-controls")
 require("wooden-gearwheel")
