@@ -1,54 +1,80 @@
-# Lignumis
-Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies.
+This mod extends the early game of Space Age by putting you on the moon "Lignumis" before you escape to Nauvis. It concentrates on wood and steam technologies, giving you some early game production chains for those resources.
+
+The duration of the stay on Lignumis will be rather short. The impact of the later game will still be substantial (once implemented).
+
+## Alpha version
+
+This is a very early version of the mod. It contains the complete idea of the moon from beginning to end but still needs a lot of features and polishing. Also end-game content and a reason to come back are still missing but are planned.
+
+To not hinder development, I will not be considerate about breaking changes until I switch the status to "Beta".
+
+If you like to contribute in any way, feel free to contact me.
+
+## Mod recommendations
+
+The following mods can be a great addition for this mod:
+
+- [Burner Leech Fork](https://mods.factorio.com/mod/Burner-Leech-Fork)
 
 ## Todo
 
- - Move wood and lumber to its own fuel category
- - Make seeds burnable again
- - Add recipe for moist stromatolite remnants for regular furnace
- - Make mod "Wooden logistics" optional
- - Balance pollution (noise)
- - Tweak enemies + warfare (add damage research)
- - Add vent for steam
- - Add recipe to void gold seeds
- - Adjust vanilla technologies
- - Add end-game stuff
- - Add burner radar
- - Balance resources
- - Force start with wooden ammo
- - Remove stromatolite (non-plant)?
- - Guarantee spawn of gold in starting area
- - Fix pipe graphics on desiccation furnace
- - Change color of gold soil
- - Ban huge rocks with coal from Nauvis
- - Increase default moisture bias
- - Create proper experience for the transition to Nauvis with a custom UI with launch button 
+Sorted by priority
+
+- Move wood and lumber to its own fuel category
+- Make seeds burnable again
+- Add recipe for moist stromatolite remnants for regular furnace
+- Make mod "Wooden logistics" optional
+- Improve start on Nauvis
+- Balance pollution (noise)
+- Tweak enemies + warfare (add damage research)
+- Add vent for steam
+- Add recipe to void gold seeds
+- Adjust vanilla technologies
+- Add end-game stuff
+- Add burner radar
+- Balance resources
+- Force start with wooden ammo
+- Remove stromatolite (non-plant)?
+- Guarantee spawn of gold in starting area
+- Fix pipe graphics on desiccation furnace
+- Change color of gold soil
+- Ban huge rocks with coal from Nauvis
+- Increase default moisture bias
+- Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your inventory)
+
+Unsorted
+
+- Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
+- Compatibility with hot metals
+- Compatibility with all wood mods from SafTheLamb
+- Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
+- 
 
 ## Credits
 
-Hurricane:
- 
- - Lumber mill
- - Core extractor
+[Hurricane](https://mods.factorio.com/user/Hurricane046)
 
-malcolmriley (https://github.com/malcolmriley/unused-renders)
+- Lumber mill
+- Core extractor
 
- - Gold seed
- - Moist stromatolite remnant
+[malcolmriley](https://github.com/malcolmriley/unused-renders)
 
-PreLeyZero (https://mods.factorio.com/mod/exotic-industries)
+- Gold seed
+- Moist stromatolite remnant
 
- - Gold patch
+[PreLeyZero](https://mods.factorio.com/mod/exotic-industries)
 
-planetfall (https://mods.factorio.com/mod/ThemTharHills)
+- Gold patch
 
- - Gold ore
- - Gold wire
+[planetfall](https://mods.factorio.com/mod/ThemTharHills)
 
-CG-Matt (https://mods.factorio.com/mod/simple-wood-liquefaction)
+- Gold ore
+- Gold wire
 
- - Wood liquefaction
+[CG-Matt](https://mods.factorio.com/mod/simple-wood-liquefaction)
 
-daydev (https://mods.factorio.com/mod/EquipmentPlusPortableEngine)
+- Wood liquefaction
 
- - Portable engine
+[daydev](https://mods.factorio.com/mod/EquipmentPlusPortableEngine)
+
+- Portable engine
