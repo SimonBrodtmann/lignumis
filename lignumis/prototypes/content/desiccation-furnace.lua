@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local furnace = util.copy(data.raw.furnace["stone-furnace"])
+local furnace = table.deepcopy(data.raw.furnace["stone-furnace"])
 furnace.name = "desiccation-furnace"
 furnace.fluid_boxes = {
     {

@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local agricultural_tower = util.copy(data.raw["agricultural-tower"]["agricultural-tower"])
+local agricultural_tower = table.deepcopy(data.raw["agricultural-tower"]["agricultural-tower"])
 agricultural_tower.name = "burner-agricultural-tower"
 agricultural_tower.minable.result = "burner-agricultural-tower"
 agricultural_tower.next_upgrade = "agricultural-tower"
@@ -43,7 +43,7 @@ crane.speed = {
     }
 }
 
-local remnants = util.copy(data.raw["corpse"]["agricultural-tower-remnants"])
+local remnants = table.deepcopy(data.raw["corpse"]["agricultural-tower-remnants"])
 remnants.name = "burner-agricultural-tower-remnants"
 remnants.icon = "__lignumis__/graphics/icons/burner-agricultural-tower.png"
 remnants.animation.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-remnants.png"

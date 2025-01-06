@@ -13,7 +13,7 @@ data:extend({
         dying_explosion = "lab-explosion",
         collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
         selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-        damaged_trigger_effect = util.copy(data.raw.lab["lab"].damaged_trigger_effect),
+        damaged_trigger_effect = table.deepcopy(data.raw.lab["lab"].damaged_trigger_effect),
         on_animation = {
             layers = {
                 {

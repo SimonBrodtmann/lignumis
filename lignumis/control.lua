@@ -62,7 +62,7 @@ script.on_event(e.on_player_created, function(event)
         local debris_items = { ["lumber"] = 8 }
 
         surface.daytime = 0.7
-        crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items, util.copy(storage.crashed_ship_parts))
+        crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items, table.deepcopy(storage.crashed_ship_parts))
         util.remove_safe(player, storage.crashed_ship_items)
         util.remove_safe(player, storage.crashed_debris_items)
         player.get_main_inventory().sort_and_merge()

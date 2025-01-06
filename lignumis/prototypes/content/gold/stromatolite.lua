@@ -1,6 +1,6 @@
 local space_age_item_sounds = require("__space-age__.prototypes.item_sounds")
 
-local stromatolite = util.copy(data.raw["simple-entity"]["copper-stromatolite"])
+local stromatolite = table.deepcopy(data.raw["simple-entity"]["copper-stromatolite"])
 stromatolite.name = "gold-stromatolite"
 stromatolite.icon = "__lignumis__/graphics/icons/gold-stromatolite.png"
 stromatolite.autoplace = {
@@ -8,7 +8,7 @@ stromatolite.autoplace = {
     "basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 2000000, input_scale = 1/8, output_scale = 1/3}",
     tile_restriction = { "natural-gold-soil" }
 }
-stromatolite.collision_mask = util.copy(data.raw["plant"]["tree-plant"].collision_mask)
+stromatolite.collision_mask = table.deepcopy(data.raw["plant"]["tree-plant"].collision_mask)
 stromatolite.mining_time = 2
 stromatolite.minable.results = {
     { type = "item", name = "gold-ore",               amount_min = 1, amount_max = 7 },
@@ -132,7 +132,7 @@ stromatolite.pictures = {
     }
 }
 
-local plant = util.copy(data.raw["plant"]["tree-plant"])
+local plant = table.deepcopy(data.raw["plant"]["tree-plant"])
 plant.name = "gold-stromatolite-plant"
 plant.localised_name = { "entity-name.gold-stromatolite-plant" }
 plant.icon = "__lignumis__/graphics/icons/gold-stromatolite.png"
@@ -156,7 +156,7 @@ plant.variation_weights = nil
 plant.collision_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
 plant.selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } }
 plant.remains_when_mined = nil
-plant.pictures = util.copy(stromatolite.pictures)
+plant.pictures = table.deepcopy(stromatolite.pictures)
 plant.autoplace = {
     probability_expression = "0",
     tile_restriction = { "natural-gold-soil" }

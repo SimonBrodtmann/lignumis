@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local silo = util.copy(data.raw["rocket-silo"]["rocket-silo"])
+local silo = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 silo.name = "provisional-rocket-silo"
 silo.module_slots = 0
 silo.allowed_effects = { "consumption", "pollution" }
@@ -45,13 +45,13 @@ silo.launch_to_space_platforms = false
 silo.rocket_parts_storage_cap = 50
 silo.to_be_inserted_to_rocket_inventory_size = 1
 
-local silo_item = util.copy(data.raw["item"]["rocket-silo"])
+local silo_item = table.deepcopy(data.raw["item"]["rocket-silo"])
 silo_item.name = "provisional-rocket-silo"
 silo_item.order = "0[provisional-rocket-silo]"
 silo_item.place_result = "provisional-rocket-silo"
 silo_item.icon = "__lignumis__/graphics/icons/provisional-rocket-silo.png"
 
-local silo_recipe = util.copy(data.raw["recipe"]["rocket-silo"])
+local silo_recipe = table.deepcopy(data.raw["recipe"]["rocket-silo"])
 silo_recipe.name = "provisional-rocket-silo"
 silo_recipe.results[1].name = "provisional-rocket-silo"
 silo_recipe.ingredients = {
@@ -62,7 +62,7 @@ silo_recipe.ingredients = {
     { type = "item", name = "gold-cable",        amount = 100 }
 }
 
-local rocket = util.copy(data.raw["rocket-silo-rocket"]["rocket-silo-rocket"])
+local rocket = table.deepcopy(data.raw["rocket-silo-rocket"]["rocket-silo-rocket"])
 rocket.name = "provisional-rocket"
 rocket.rising_speed = 1 / (14 * 60)
 rocket.engine_starting_speed = 1 / (11 * 60)

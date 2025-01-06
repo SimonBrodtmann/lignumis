@@ -36,7 +36,7 @@ function make_rotated_animation_variations_from_sheet(variation_count, sheet) --
     return result
 end
 
-local pipe = util.copy(data.raw.pipe["pipe"])
+local pipe = table.deepcopy(data.raw.pipe["pipe"])
 pipe.name = "gold-pipe"
 pipe.icon = "__lignumis__/graphics/icons/gold-pipe.png"
 pipe.corpse = "gold-pipe-remnants"
@@ -120,7 +120,7 @@ local pipe_remnants = {
     })
 }
 
-local pipe_to_ground = util.copy(data.raw["pipe-to-ground"]["pipe-to-ground"])
+local pipe_to_ground = table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
 pipe_to_ground.name = "gold-pipe-to-ground"
 pipe_to_ground.icon = "__lignumis__/graphics/icons/gold-pipe-to-ground.png"
 pipe_to_ground.corpse = "gold-pipe-to-ground-remnants"

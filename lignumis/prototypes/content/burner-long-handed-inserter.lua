@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local long_handed_inserter = util.copy(data.raw["inserter"]["long-handed-inserter"])
+local long_handed_inserter = table.deepcopy(data.raw["inserter"]["long-handed-inserter"])
 long_handed_inserter.name = "burner-long-handed-inserter"
 long_handed_inserter.icon = "__lignumis__/graphics/icons/burner-long-handed-inserter.png"
 long_handed_inserter.minable.result = "burner-long-handed-inserter"
@@ -32,7 +32,7 @@ long_handed_inserter.energy_source = {
 long_handed_inserter.extension_speed = 0.035
 long_handed_inserter.rotation_speed = 0.014
 
-local remnants = util.copy(data.raw["corpse"]["long-handed-inserter-remnants"])
+local remnants = table.deepcopy(data.raw["corpse"]["long-handed-inserter-remnants"])
 remnants.name = "burner-long-handed-inserter-remnants"
 remnants.icon = "__lignumis__/graphics/icons/burner-long-handed-inserter.png"
 remnants.animation[1].filename = "__lignumis__/graphics/entity/burner-long-handed-inserter-remnants.png"

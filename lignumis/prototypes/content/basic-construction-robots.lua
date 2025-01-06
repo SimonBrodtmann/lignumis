@@ -2,7 +2,7 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 local item_tints = require("__base__.prototypes.item-tints")
 
 local function robot(color)
-    local result = util.copy(data.raw["construction-robot"]["construction-robot"])
+    local result = table.deepcopy(data.raw["construction-robot"]["construction-robot"])
     result.name = "basic-construction-robot-" .. color
     result.icon = "__lignumis__/graphics/icons/basic-construction-robot-" .. color .. ".png"
     result.minable.result = "basic-construction-robot-" .. color
@@ -115,7 +115,7 @@ local function generator_recipe(color, ingredients)
 end
 
 local function roboport(color)
-    local result = util.copy(data.raw["roboport-equipment"]["personal-roboport-equipment"])
+    local result = table.deepcopy(data.raw["roboport-equipment"]["personal-roboport-equipment"])
     result.name = "basic-personal-roboport-equipment-" .. color
     result.take_result = "basic-personal-roboport-equipment-" .. color
     result.sprite.filename = "__lignumis__/graphics/equipment/basic-personal-roboport-equipment-" .. color .. ".png"

@@ -1,6 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local assembling_machine = util.copy(data.raw["assembling-machine"]["assembling-machine-1"])
+local assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"])
 assembling_machine.name = "burner-assembling-machine"
 assembling_machine.icon = "__lignumis__/graphics/icons/burner-assembling-machine.png"
 assembling_machine.minable.result = "burner-assembling-machine"
@@ -36,7 +36,7 @@ assembling_machine.energy_source = {
 }
 assembling_machine.energy_usage = "75kW"
 
-local remnants = util.copy(data.raw["corpse"]["assembling-machine-1-remnants"])
+local remnants = table.deepcopy(data.raw["corpse"]["assembling-machine-1-remnants"])
 remnants.name = "burner-assembling-machine-remnants"
 remnants.icon = "__lignumis__/graphics/icons/burner-assembling-machine.png"
 remnants.animation[1].filename = "__lignumis__/graphics/entity/burner-assembling-machine-remnants.png"
