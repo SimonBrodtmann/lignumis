@@ -47,7 +47,8 @@ local furnace_recipe = {
         { type = "item", name = "stone-furnace", amount = 1 },
         { type = "item", name = "gold-pipe",     amount = 2 }
     },
-    results = { { type = "item", name = "desiccation-furnace", amount = 1 } }
+    results = { { type = "item", name = "desiccation-furnace", amount = 1 } },
+    enabled = false
 }
 
 data:extend({

@@ -115,7 +115,9 @@ data:extend({
         researching_speed = 0.5,
         inputs = {
             "wood-science-pack",
-            "steam-science-pack"
+            "steam-science-pack",
+            "automation-science-pack",
+            "logistic-science-pack"
         },
         icons_positioning = {
             { inventory_index = defines.inventory.lab_modules, shift = { 0, 0.9 } },

@@ -62,21 +62,47 @@ table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_cat
 table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "wood-processing-or-assembling")
 
 
--- Disable iron and copper recipes
+-- Disable vanilla early game recipes
 
 data.raw.recipe["iron-plate"].enabled = false
 data.raw.recipe["iron-gear-wheel"].enabled = false
 data.raw.recipe["iron-chest"].enabled = false
 data.raw.recipe["copper-plate"].enabled = false
 data.raw.recipe["copper-cable"].enabled = false
+data.raw.recipe["transport-belt"].enabled = false
+
+
+-- Progressive recipes
+
+if settings.startup["lignumis-belt-progression"].value then
+    table.insert(
+        data.raw.recipe["transport-belt"].ingredients,
+        { type = "item", name = "wood-transport-belt", amount = 2 }
+    )
+    table.insert(
+        data.raw.recipe["underground-belt"].ingredients,
+        { type = "item", name = "wood-underground-belt", amount = 2 }
+    )
+    table.insert(
+        data.raw.recipe["splitter"].ingredients,
+        { type = "item", name = "wood-splitter", amount = 1 }
+    )
+end
+
+if settings.startup["lignumis-inserter-progression"].value then
+    table.insert(
+        data.raw.recipe["inserter"].ingredients,
+        { type = "item", name = "burner-inserter", amount = 1 }
+    )
+end
 
 
 -- Adjust vanilla technologies
 
-local automation_technology = data.raw.technology["automation-science-pack"]
-automation_technology.prerequisites = { "planet-discovery-nauvis" }
-automation_technology.research_trigger = nil
-automation_technology.unit = {
+local automation_science_pack_technology = data.raw.technology["automation-science-pack"]
+automation_science_pack_technology.prerequisites = { "planet-discovery-nauvis" }
+automation_science_pack_technology.research_trigger = nil
+automation_science_pack_technology.unit = {
     count = 100,
     ingredients = {
         { "wood-science-pack",  1 },
@@ -108,6 +134,15 @@ steam_power_technology.unit = {
     },
     time = 15
 }
+
+local automation_technology = data.raw.technology["automation"]
+automation_technology.ignore_tech_cost_multiplier = false
+
+local logistics_technology = data.raw.technology["logistics"]
+table.insert(logistics_technology.effects, {
+    type = "unlock-recipe",
+    recipe = "transport-belt"
+})
 
 local landfill_technology = data.raw.technology["landfill"]
 landfill_technology.prerequisites = { "burner-automation" }

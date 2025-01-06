@@ -23,8 +23,8 @@ local function travel_to_nauvis()
         end
     end
 
-    local ship_items = remote.call("freeplay", "get_ship_items")
-    local debris_items = remote.call("freeplay", "get_debris_items")
+    local ship_items = { ["burner-mining-drill"] = 5, ["stone-furnace"] = 5, ["burner-assembling-machine"] = 2, ["burner-agricultural-tower"] = 4, ["wood-lab"] = 4 }
+    local debris_items = { ["wood-darts-magazine"] = 20, ["wood"] = 20, ["lumber"] = 20 }
     local crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
 
     nauvis.daytime = 0.7
