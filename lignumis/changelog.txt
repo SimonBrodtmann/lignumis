@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 06.01.2025
+  Changes:
+    - The mod "Burner Leech Fork" is removed as a dependency and listed as optional addition in the description
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 06.01.2025
   Changes:
