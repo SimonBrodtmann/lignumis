@@ -113,6 +113,10 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "moist-stromatolite-remnant-desiccation"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "moist-stromatolite-remnant-desiccation-without-steam"
             }
         },
         unit = {

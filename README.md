@@ -20,7 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Add recipe for moist stromatolite remnants for regular furnace
 - Make mod "Wooden logistics" optional
 - Improve start on Nauvis
 - Balance pollution (noise)

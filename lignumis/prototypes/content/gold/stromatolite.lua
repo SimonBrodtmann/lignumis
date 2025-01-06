@@ -231,10 +231,48 @@ local remnant = {
     weight = 1 * kg
 }
 
+local desiccation_recipe = {
+    type = "recipe",
+    name = "moist-stromatolite-remnant-desiccation",
+    icons = {
+        { icon = "__lignumis__/graphics/icons/peat.png" },
+        { icon = "__base__/graphics/icons/fluid/steam.png",                      scale = 0.25, shift = { 8, 8 } },
+        { icon = "__lignumis__/graphics/icons/moist-stromatolite-remnant-1.png", scale = 0.25, shift = { -8, 8 } }
+    },
+    category = "desiccation",
+    subgroup = "raw-material",
+    order = "b0[desiccation]",
+    energy_required = 9.6,
+    ingredients = { { type = "item", name = "moist-stromatolite-remnant", amount = 2 } },
+    results = {
+        { type = "item",  name = "peat",  amount = 1 },
+        { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+    },
+    enabled = false
+}
+
+local desiccation_recipe_no_steam = {
+    type = "recipe",
+    name = "moist-stromatolite-remnant-desiccation-without-steam",
+    icons = {
+        { icon = "__lignumis__/graphics/icons/peat.png" },
+        { icon = "__lignumis__/graphics/icons/moist-stromatolite-remnant-1.png", scale = 0.25, shift = { -8, 8 } }
+    },
+    category = "smelting",
+    subgroup = "raw-material",
+    order = "b1[desiccation]",
+    energy_required = 9.6,
+    ingredients = { { type = "item", name = "moist-stromatolite-remnant", amount = 2 } },
+    results = { { type = "item", name = "peat", amount = 1 } },
+    enabled = false
+}
+
 data:extend({
     stromatolite,
     plant,
     seed,
     bacteria,
-    remnant
+    remnant,
+    desiccation_recipe,
+    desiccation_recipe_no_steam
 })

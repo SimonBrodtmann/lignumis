@@ -1,6 +1,7 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 local resource_autoplace = require("resource-autoplace")
 local item_sounds = require("__base__.prototypes.item_sounds")
+local item_tints = require("__base__.prototypes.item-tints")
 
 local grass_driving_sound = {
     sound = {
@@ -84,24 +85,5 @@ data:extend({
         random_tint_color = item_tints.iron_rust,
         fuel_category = "chemical",
         fuel_value = "8MJ",
-    },
-    {
-        type = "recipe",
-        name = "moist-stromatolite-remnant-desiccation",
-        icons = {
-            { icon = "__lignumis__/graphics/icons/peat.png" },
-            { icon = "__base__/graphics/icons/fluid/steam.png", scale = 0.25, shift = { 8, 8 } },
-            { icon = "__lignumis__/graphics/icons/moist-stromatolite-remnant-1.png", scale = 0.25, shift = { -8, 8 } }
-        },
-        category = "desiccation",
-        subgroup = "raw-material",
-        order = "b[desiccation]",
-        energy_required = 9.6,
-        ingredients = { { type = "item", name = "moist-stromatolite-remnant", amount = 2 } },
-        results = {
-            { type = "item", name = "peat", amount = 1 },
-            { type = "fluid", name = "steam", amount = 20, temperature = 165 }
-        },
-        enabled = false
     }
 })
