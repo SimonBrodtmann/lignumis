@@ -9,6 +9,7 @@
    "dependencies": [
       "base",
       "space-age >= 2.0.0",
+      "cf-lib >= 0.0.1",
       "wood-military >= 2.0.0",
       "Wood-Walls >= 1.2.0",
       "wood-logistics >= 2.1.1",
