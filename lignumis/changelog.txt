@@ -5,6 +5,7 @@ Date: 06.01.2025
     - The mod "Burner Leech Fork" is removed as a dependency and listed as optional addition in the description
     - Add "wood fuel" category so burner entities don't use trees, lumber and seeds as fuel
     - Add recipe to process moist stromatolite remnant in a normal furnace to balance steam production
+    - Add recipe to process gold stromatolite seeds to void excess seeds
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 06.01.2025

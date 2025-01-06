@@ -25,7 +25,6 @@ Sorted by priority
 - Balance pollution (noise)
 - Tweak enemies + warfare (add damage research)
 - Add vent for steam
-- Add recipe to void gold seeds
 - Adjust vanilla technologies
 - Add end-game stuff
 - Add burner radar

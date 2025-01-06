@@ -267,6 +267,25 @@ local desiccation_recipe_no_steam = {
     enabled = false
 }
 
+local seed__to_peat_recipe = {
+    type = "recipe",
+    name = "gold-stromatolite-seed-to-peat",
+    icons = {
+        { icon = "__lignumis__/graphics/icons/peat.png" },
+        { icon = "__lignumis__/graphics/icons/gold-stromatolite-seed.png", scale = 0.25, shift = { -8, 8 } }
+    },
+    category = "basic-crafting",
+    subgroup = "raw-material",
+    order = "b2[gold-stromatolite-seed-to-peat]",
+    energy_required = 3.2,
+    ingredients = { { type = "item", name = "gold-stromatolite-seed", amount = 10 } },
+    results = {
+        { type = "item", name = "peat", amount = 1 },
+        { type = "item", name = "gold-ore", amount = 1 }
+    },
+    enabled = true
+}
+
 data:extend({
     stromatolite,
     plant,
@@ -274,5 +293,6 @@ data:extend({
     bacteria,
     remnant,
     desiccation_recipe,
-    desiccation_recipe_no_steam
+    desiccation_recipe_no_steam,
+    seed__to_peat_recipe
 })
