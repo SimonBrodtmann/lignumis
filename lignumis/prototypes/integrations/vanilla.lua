@@ -40,6 +40,21 @@ data.raw.recipe["burner-inserter"].ingredients = {
 }
 
 
+-- Lab
+
+local lab = data.raw["lab"]["lab"]
+lab.inputs = table.assign({
+    "wood-science-pack",
+    "steam-science-pack"
+}, lab.inputs)
+
+local biolab = data.raw["lab"]["biolab"]
+biolab.inputs = table.assign({
+    "wood-science-pack",
+    "steam-science-pack"
+}, biolab.inputs)
+
+
 -- Wood processing
 
 local wood_processing = data.raw.recipe["wood-processing"]
