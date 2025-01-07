@@ -14,6 +14,7 @@
         "Wood-Walls >= 1.2.0",
         "mf-buildings >= 0.1.0",
         "mf-logistics >= 0.1.0",
+        "?hot-metals",
         "!wood-logistics"
     ]
 }
