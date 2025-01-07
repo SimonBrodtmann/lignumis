@@ -11,7 +11,7 @@ data:extend({
 table.insert(data.raw["character"]["character"].crafting_categories, "wood-processing-or-assembling")
 
 LumberMill.EntityBuilder:new()
-    :burnerEnergySource({ emissions_per_minute = { noise = 50 } })
+    :burnerEnergySource({ emissions_per_minute = { noise = 100 } })
     :baseProductivity(0.5)
     :apply({
         crafting_categories = { "wood-processing-or-assembling" },

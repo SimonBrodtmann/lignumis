@@ -24,7 +24,7 @@ assembling_machine.energy_source = {
     type = "fluid",
     fuel_categories = { "steam" },
     effectivity = 1,
-    emissions_per_minute = { noise = 20 },
+    emissions_per_minute = { noise = 50 },
     scale_fluid_usage = true,
     fluid_box = {
         production_type = "input",

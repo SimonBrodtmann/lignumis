@@ -8,10 +8,10 @@ Belt.EntityBuilder:new()
     :animationSpeedMultiplier(1.01)
     :apply({
         transportBelt = {
-            emissions_per_second = { noise = 0.01 }
+            emissions_per_second = { noise = 0.05 }
         },
         undergroundBelt = {
-            emissions_per_second = { noise = 0.1 }
+            emissions_per_second = { noise = 0.5 }
         },
         splitter = {
             emissions_per_second = { noise = 1 }

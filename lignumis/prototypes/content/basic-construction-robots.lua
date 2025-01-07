@@ -65,7 +65,7 @@ local function generator(color)
         burner = {
             type = "burner",
             fuel_categories = { "chemical" },
-            emissions_per_minute = { noise = 1, pollution = 1 },
+            emissions_per_minute = { noise = 5, pollution = 1 },
             fuel_inventory_size = 2,
             smoke = {
                 {

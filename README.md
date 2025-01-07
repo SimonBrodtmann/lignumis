@@ -20,7 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Balance pollution (noise)
 - Tweak enemies + warfare (add damage research)
 - Adjust vanilla technologies
 - Add end-game stuff
@@ -37,11 +36,11 @@ Sorted by priority
 Unsorted
 
 - Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
-- Compatibility with hot metals
 - Compatibility with all wood mods from SafTheLamb
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Optimize images
+- Add noise to non-Lignumis entities brought in later
 
 ## Credits
 

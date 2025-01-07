@@ -21,7 +21,7 @@ assembling_machine.energy_source = {
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = { noise = 20 },
+    emissions_per_minute = { noise = 50 },
     smoke = {
         {
             name = "smoke",

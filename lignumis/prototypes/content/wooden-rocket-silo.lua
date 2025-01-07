@@ -11,7 +11,7 @@ silo.energy_source = {
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = { noise = 100 },
+    emissions_per_minute = { noise = 1000 },
     smoke = {
         {
             name = "smoke",

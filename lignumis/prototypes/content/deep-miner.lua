@@ -6,7 +6,7 @@ local entity = DeepMiner.EntityBuilder:new():build({
     energy_usage = "25MW",
     mining_speed = 30,
     energySource = {
-        emissions_per_minute = { noise = 100 }
+        emissions_per_minute = { noise = 500 }
     }
 })
 entity.resource_categories = { "deep-mining" }

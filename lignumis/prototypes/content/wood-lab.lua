@@ -101,7 +101,7 @@ data:extend({
             fuel_categories = { "chemical" },
             effectivity = 1,
             fuel_inventory_size = 1,
-            emissions_per_minute = { pollution = 12, noise = 1 },
+            emissions_per_minute = { pollution = 12, noise = 10 },
             light_flicker = { color = { 0, 0, 0 } },
             smoke = {
                 {

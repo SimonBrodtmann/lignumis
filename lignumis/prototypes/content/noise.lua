@@ -29,9 +29,17 @@ data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.noise = 200
 
 for _, tree in pairs(data.raw.tree) do
     if tree.emissions_per_second then
-        tree.emissions_per_second.noise = -0.01
+        tree.emissions_per_second.noise = -0.1
     end
 end
 
-data.raw.furnace["stone-furnace"].energy_source.emissions_per_minute.noise = 4
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute.noise = 12
+data.raw.furnace["stone-furnace"].energy_source.emissions_per_minute.noise = 10
+data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_minute.noise = 50
+
+local tiles = {"grass-1", "grass-2", "grass-3", "grass-4", "water", "deepwater", "natural-gold-soil"}
+for _, tile in pairs(tiles) do
+    if not data.raw.tile[tile].absorptions_per_second then
+        data.raw.tile[tile].absorptions_per_second = {}
+    end
+    data.raw.tile[tile].absorptions_per_second.noise = 0.001
+end

@@ -13,7 +13,7 @@ agricultural_tower.energy_source = {
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = { noise = 4 }
+    emissions_per_minute = { noise = 100 }
 }
 agricultural_tower.resistances = nil
 agricultural_tower.input_inventory_size = 1
