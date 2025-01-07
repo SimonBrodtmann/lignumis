@@ -9,6 +9,10 @@ Date: 07.01.2025
     - Balance "noise" pollution
     - Move 2 damage research levels to Lignumis
     - Adjust vanilla technologies
+    - Add compatibility with hot metals
+  Bug Fixes:
+    - Fix too slow belt animation
+    - Fix initial fuel for all burner inserters
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 06.01.2025
