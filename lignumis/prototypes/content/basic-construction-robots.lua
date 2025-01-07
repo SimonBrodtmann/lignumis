@@ -206,7 +206,7 @@ local copper_robot_technology = {
     },
     prerequisites = { "basic-construction-robotics-gold", "automation-science-pack" },
     unit = {
-        count = 200,
+        count = 50,
         ingredients = {
             { "automation-science-pack", 1 }
         },
