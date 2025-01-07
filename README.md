@@ -20,7 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Tweak enemies + warfare (add damage research)
 - Adjust vanilla technologies
 - Add end-game stuff
 - Add burner radar

@@ -7,6 +7,7 @@ Date: 07.01.2025
     - Vanilla labs can use Lignumis science packs
     - Balance technology "Basic construction robotics (copper)"
     - Balance "noise" pollution
+    - Move 2 damage research levels to Lignumis
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 06.01.2025

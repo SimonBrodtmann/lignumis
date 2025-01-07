@@ -202,6 +202,56 @@ robots_speed_technology_4.unit.ingredients = {
     { "utility-science-pack",    1 }
 }
 
+local physical_damage_technology_1 = data.raw.technology["physical-projectile-damage-1"]
+physical_damage_technology_1.prerequisites = { "basic-gun-turret" }
+physical_damage_technology_1.unit.ingredients = { { "wood-science-pack", 1 } }
+table.insert(physical_damage_technology_1.effects, {
+    type = "turret-attack",
+    turret_id = "basic-gun-turret",
+    modifier = 0.2
+})
+
+local weapon_speed_technology_1 = data.raw.technology["weapon-shooting-speed-1"]
+weapon_speed_technology_1.prerequisites = table.deepcopy(physical_damage_technology_1.prerequisites)
+weapon_speed_technology_1.unit.ingredients = table.deepcopy(physical_damage_technology_1.unit.ingredients)
+
+local physical_damage_technology_2 = data.raw.technology["physical-projectile-damage-2"]
+physical_damage_technology_2.prerequisites = { "physical-projectile-damage-1", "steam-science-pack" }
+physical_damage_technology_2.unit.ingredients = { { "wood-science-pack", 1 }, { "steam-science-pack", 1 } }
+table.insert(physical_damage_technology_2.effects, {
+    type = "turret-attack",
+    turret_id = "basic-gun-turret",
+    modifier = 0.2
+})
+
+local weapon_speed_technology_2 = data.raw.technology["weapon-shooting-speed-2"]
+weapon_speed_technology_2.prerequisites = { "weapon-shooting-speed-1", "steam-science-pack" }
+weapon_speed_technology_2.unit.ingredients = table.deepcopy(physical_damage_technology_2.unit.ingredients)
+
+local physical_damage_technology_3 = data.raw.technology["physical-projectile-damage-3"]
+physical_damage_technology_3.prerequisites = { "physical-projectile-damage-2", "logistic-science-pack" }
+physical_damage_technology_3.unit.ingredients = { { "automation-science-pack", 1 }, { "logistic-science-pack", 1 } }
+table.insert(physical_damage_technology_3.effects, {
+    type = "turret-attack",
+    turret_id = "basic-gun-turret",
+    modifier = 0.3
+})
+
+local weapon_speed_technology_3 = data.raw.technology["weapon-shooting-speed-3"]
+weapon_speed_technology_3.prerequisites = { "weapon-shooting-speed-2", "logistic-science-pack" }
+weapon_speed_technology_3.unit.ingredients = table.deepcopy(physical_damage_technology_3.unit.ingredients)
+
+local physical_damage_technology_4 = data.raw.technology["physical-projectile-damage-4"]
+physical_damage_technology_4.prerequisites = { "physical-projectile-damage-3", "military-science-pack" }
+table.insert(physical_damage_technology_4.effects, {
+    type = "turret-attack",
+    turret_id = "basic-gun-turret",
+    modifier = 0.3
+})
+
+local weapon_speed_technology_4 = data.raw.technology["weapon-shooting-speed-4"]
+weapon_speed_technology_4.prerequisites = { "weapon-shooting-speed-3", "military-science-pack" }
+
 
 -- Equipment
 
