@@ -5,6 +5,7 @@ Belt.EntityBuilder:new()
     :itemsPerSecond(7.5)
     :nextTier("")
     :undergroundDistance(4)
+    :animationSpeedMultiplier(1.01)
     :apply({
         transportBelt = {
             emissions_per_second = { noise = 0.01 }
