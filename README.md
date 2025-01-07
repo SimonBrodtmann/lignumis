@@ -21,7 +21,6 @@ The following mods can be a great addition for this mod:
 Sorted by priority
 
 - Add end-game stuff
-- Add burner radar
 - Balance resources
 - Remove stromatolite (non-plant)?
 - Guarantee spawn of gold in starting area
@@ -40,13 +39,14 @@ Unsorted
 - Optimize images
 - Add noise to non-Lignumis entities brought in later
 - Add deep core mining
+- Add greenhouse
 
 ## Credits
 
 [Hurricane](https://mods.factorio.com/user/Hurricane046)
 
 - Lumber mill
-- Core extractor
+- Deep miner
 
 [malcolmriley](https://github.com/malcolmriley/unused-renders)
 
@@ -77,3 +77,7 @@ Unsorted
 [Wooden Basegame Assets](https://mods.factorio.com/mod/wood-base-assets)
 
 - Lumber
+
+[Krastorio 2 Assets](https://mods.factorio.com/mod/Krastorio2Assets)
+
+- Basic radar

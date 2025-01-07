@@ -22,5 +22,6 @@ require("basic-construction-robots")
 require("lumber")
 require("wood-logistics")
 require("basic-repair-pack")
+require("basic-radar")
 
 require("noise")
