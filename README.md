@@ -39,6 +39,7 @@ Unsorted
 - Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
 - Compatibility with hot metals
 - Compatibility with all wood mods from SafTheLamb
+- Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Optimize images
 
