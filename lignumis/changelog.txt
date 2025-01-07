@@ -8,6 +8,7 @@ Date: 07.01.2025
     - Balance technology "Basic construction robotics (copper)"
     - Balance "noise" pollution
     - Move 2 damage research levels to Lignumis
+    - Adjust vanilla technologies
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 06.01.2025

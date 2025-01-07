@@ -20,7 +20,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Adjust vanilla technologies
 - Add end-game stuff
 - Add burner radar
 - Balance resources
@@ -40,6 +39,7 @@ Unsorted
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Optimize images
 - Add noise to non-Lignumis entities brought in later
+- Add deep core mining
 
 ## Credits
 

@@ -1,3 +1,5 @@
+local Technology = require("__cf-lib__/data/Technology")
+
 -- Burner mining drill
 
 local drill = data.raw["mining-drill"]["burner-mining-drill"]
@@ -251,6 +253,14 @@ table.insert(physical_damage_technology_4.effects, {
 
 local weapon_speed_technology_4 = data.raw.technology["weapon-shooting-speed-4"]
 weapon_speed_technology_4.prerequisites = { "weapon-shooting-speed-3", "military-science-pack" }
+
+local production_science_pack_technology = Technology:new("production-science-pack")
+production_science_pack_technology:replacePrerequisite("advanced-material-processing-2", "space-platform-thruster")
+production_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack" })
+
+local utility_science_pack_technology = Technology:new("utility-science-pack")
+utility_science_pack_technology:setPrerequisites({ "space-platform-thruster" })
+utility_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack" })
 
 
 -- Equipment

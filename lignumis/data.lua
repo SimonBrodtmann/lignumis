@@ -1,3 +1,12 @@
+Lignumis = {
+    science_blacklist = {
+        "deep-miner",
+        "logistic-system",
+        "space-platform-thruster",
+        "kovarex-enrichment-process"
+    }
+}
+
 require("__cf-lib__/util")
 
 require("prototypes/content/data")
