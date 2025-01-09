@@ -1,9 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
-Date: 08.01.2025
+Date: 09.01.2025
   Changes:
     - Remove temporary incompatibility with wood-logistics
     - Add basic radar
+    - Balance peat resource patches
+    - Increase fuel value of wood pulp
+    - Balance start on Nauvis
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 07.01.2025

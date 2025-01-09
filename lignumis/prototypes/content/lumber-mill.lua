@@ -19,7 +19,7 @@ LumberMill.EntityBuilder:new()
         energy_usage = "1000kW",
     })
 
-LumberMill.ItemBuilder:new()
+local lumber_mill_item = LumberMill.ItemBuilder:new()
     :apply({
         default_import_location = "lignumis"
     })
@@ -42,3 +42,25 @@ LumberMill.TechnologyBuilder:new()
     :time(15)
     :ingredients({ { "wood-science-pack", 1 }, { "steam-science-pack", 1 } })
     :apply()
+
+LumberMill.RecipeBuilder:new()
+    :ingredients({
+        { type = "item", name = "stone-brick",          amount = 40 },
+        { type = "item", name = "lumber",               amount = 50 },
+        { type = "item", name = "iron-gear-wheel",      amount = 50 },
+        { type = "item", name = "electronic-circuit",   amount = 20 },
+        { type = "item", name = "assembling-machine-1", amount = 2 }
+    })
+    :apply({
+        name = "lumber-mill-electronic-circuit",
+        category = "wood-processing-or-assembling",
+        icons = {
+            { icon = lumber_mill_item.icon },
+            { icon = "__base__/graphics/icons/electronic-circuit.png", scale = 0.25, shift = { 8, 8 } }
+        }
+    })
+
+table.insert(data.raw.technology["electronics"].effects, {
+    type = "unlock-recipe",
+    recipe = "lumber-mill-electronic-circuit"
+})

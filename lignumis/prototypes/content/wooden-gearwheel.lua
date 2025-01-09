@@ -18,7 +18,7 @@ data:extend({
         type = "recipe",
         name = "wooden-gear-wheel",
         ingredients = { { type = "item", name = "lumber", amount = 1 } },
-        results = { { type = "item", name = "wooden-gear-wheel", amount = 1 } },
+        results = { { type = "item", name = "wooden-gear-wheel", amount = 2 } },
         allow_productivity = true
     }
 })
