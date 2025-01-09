@@ -20,9 +20,8 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
+- Adjust rocket parts recipe
 - Add end-game stuff
-- Balance resources
-- Remove stromatolite (non-plant)?
 - Guarantee spawn of gold in starting area
 - Fix pipe graphics on desiccation furnace
 - Change color of gold soil
