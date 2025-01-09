@@ -3,7 +3,7 @@ data:extend({
         type = "fluid",
         name = "wood-pulp",
         default_temperature = 150,
-        fuel_value = "150kJ",
+        fuel_value = "250kJ",
         base_color = { r = 0.57, g = 0.392, b = 0.114 },
         flow_color = { r = 0.57, g = 0.392, b = 0.114 },
         icon = "__lignumis__/graphics/icons/wood-pulp.png",
