@@ -13,7 +13,7 @@ return {
     },
     autoplace_controls = {
         ["lignumis_gold"] = { richness = 1, frequency = 1, size = 1 },
-        ["lignumis_peat"] = { richness = 1/2, frequency = 6, size = 1 },
+        ["lignumis_peat"] = { richness = 1/2, frequency = 6, size = 2 },
         ["stone"] = { richness = 1/6, frequency = 4, size = 4 },
         ["water"] = {},
         ["trees"] = {},
