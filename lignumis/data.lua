@@ -3,7 +3,8 @@ Lignumis = {
         "deep-miner",
         "logistic-system",
         "space-platform-thruster",
-        "kovarex-enrichment-process"
+        "kovarex-enrichment-process",
+        "astroponics"
     }
 }
 
