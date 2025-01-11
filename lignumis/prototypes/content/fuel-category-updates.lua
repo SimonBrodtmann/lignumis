@@ -29,3 +29,5 @@ end
 
 -- Add more if incompatibilities arise
 update_fuel_categories(data.raw["boiler"])
+update_fuel_categories(data.raw["reactor"])
+update_fuel_categories(data.raw["car"])
