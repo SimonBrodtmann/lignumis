@@ -15,12 +15,13 @@ If you like to contribute in any way, feel free to contact me.
 The following mods can be a great addition for this mod:
 
 - [Burner Leech Fork](https://mods.factorio.com/mod/Burner-Leech-Fork)
+- [Hot metals](https://mods.factorio.com/mod/hot-metals)
 
 ## Todo
 
 Sorted by priority
 
-- Adjust rocket parts recipe
+- Make coming back to Lignumis work
 - Add end-game stuff
 - Guarantee spawn of gold in starting area
 - Fix pipe graphics on desiccation furnace
