@@ -4,10 +4,11 @@ local DeepMiner = DeepMinerFactory("deep-miner")
 local entity = DeepMiner.EntityBuilder:new():build({
     resource_searching_radius = 0.49,
     energy_usage = "25MW",
-    mining_speed = 30,
+    mining_speed = 15,
     energySource = {
         emissions_per_minute = { noise = 500 }
-    }
+    },
+    resource_drain_rate_percent = 75
 })
 entity.resource_categories = { "deep-mining" }
 data:extend({ entity })
@@ -25,9 +26,10 @@ DeepMiner.RecipeBuilder:new()
         { type = "item", name = "electric-engine-unit", amount = 100 },
         { type = "item", name = "steel-plate", amount = 200 },
         { type = "item", name = "concrete", amount = 50 }
-
     })
-    :apply()
+    :apply({
+        category = "metallurgy-or-assembling"
+    })
 
 DeepMiner.TechnologyBuilder:new()
     :prerequisites({ "space-science-pack" })
