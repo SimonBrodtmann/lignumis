@@ -7,6 +7,8 @@ Date: 09.01.2025
     - Balance peat resource patches
     - Increase fuel value of wood pulp
     - Balance start on Nauvis
+    - Fix bug for when freeplay interface is not present
+    - Reactors and cars burn wood fuel
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 07.01.2025

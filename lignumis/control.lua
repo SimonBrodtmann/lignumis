@@ -53,24 +53,30 @@ script.on_event(e.on_player_created, function(event)
 
     if not storage.init then
         storage.init = true
-        storage.crashed_ship_items = remote.call("freeplay", "get_ship_items")
-        storage.crashed_debris_items = remote.call("freeplay", "get_debris_items")
-        storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
-        storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
-
-        local ship_items = { ["wood-darts-magazine"] = 8 }
-        local debris_items = { ["lumber"] = 8 }
 
         surface.daytime = 0.7
-        crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items, table.deepcopy(storage.crashed_ship_parts))
-        util.remove_safe(player, storage.crashed_ship_items)
-        util.remove_safe(player, storage.crashed_debris_items)
-        player.get_main_inventory().sort_and_merge()
         if player.character then
             player.character.destructible = false
         end
-        storage.crash_site_cutscene_active = true
-        crash_site.create_cutscene(player, { -5, -4 })
+
+        if remote.interfaces.freeplay then
+            storage.crashed_ship_items = remote.call("freeplay", "get_ship_items")
+            storage.crashed_debris_items = remote.call("freeplay", "get_debris_items")
+            storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
+            storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
+
+            local ship_items = { ["wood-darts-magazine"] = 8 }
+            local debris_items = { ["lumber"] = 8 }
+
+            crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items, table.deepcopy(storage.crashed_ship_parts))
+            util.remove_safe(player, storage.crashed_ship_items)
+            util.remove_safe(player, storage.crashed_debris_items)
+
+            player.get_main_inventory().sort_and_merge()
+
+            storage.crash_site_cutscene_active = true
+            crash_site.create_cutscene(player, { -5, -4 })
+        end
 
         chart_starting_area()
     end

@@ -23,12 +23,15 @@ local function travel_to_nauvis()
         end
     end
 
-    local ship_items = { ["burner-mining-drill"] = 5, ["stone-furnace"] = 5, ["burner-assembling-machine"] = 2, ["burner-agricultural-tower"] = 4, ["wood-lab"] = 4 }
-    local debris_items = { ["wood-darts-magazine"] = 20, ["wood"] = 20, ["lumber"] = 20 }
-    local crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
-
     nauvis.daytime = 0.7
-    crash_site.create_crash_site(nauvis, { -5, -6 }, ship_items, debris_items, table.deepcopy(crashed_ship_parts))
+
+    if remote.interfaces.freeplay then
+        local ship_items = { ["burner-mining-drill"] = 5, ["stone-furnace"] = 5, ["burner-assembling-machine"] = 2, ["burner-agricultural-tower"] = 4, ["wood-lab"] = 4 }
+        local debris_items = { ["wood-darts-magazine"] = 20, ["wood"] = 20, ["lumber"] = 20 }
+        local crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
+
+        crash_site.create_crash_site(nauvis, { -5, -6 }, ship_items, debris_items, table.deepcopy(crashed_ship_parts))
+    end
 end
 
 script.on_event(e.on_rocket_launched, function(event)
