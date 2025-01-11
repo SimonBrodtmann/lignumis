@@ -122,6 +122,7 @@ local function roboport(color)
     result.energy_source.input_flow_limit = "400kW"
     result.energy_source.buffer_capacity = "10MJ"
     result.charging_energy = "500kW"
+    result.construction_radius = 10
     return result
 end
 
