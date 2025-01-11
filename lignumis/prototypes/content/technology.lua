@@ -1,6 +1,28 @@
 data:extend({
     {
         type = "technology",
+        name = "planet-discovery-lignumis",
+        icons = util.technology_icon_constant_planet("__lignumis__/graphics/technology/lignumis.png"),
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-space-location",
+                space_location = "lignumis",
+                use_icon_overlay_constant = true
+            }
+        },
+        prerequisites = { "automation-science-pack" },
+        unit = {
+            count = 10,
+            ingredients = {
+                { "automation-science-pack", 1 },
+            },
+            time = 10
+        }
+    },
+    {
+        type = "technology",
         name = "planet-discovery-nauvis",
         icons = util.technology_icon_constant_planet("__lignumis__/graphics/technology/nauvis.png"),
         icon_size = 256,

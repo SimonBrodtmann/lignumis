@@ -9,6 +9,7 @@ Date: 09.01.2025
     - Balance start on Nauvis
     - Fix bug for when freeplay interface is not present
     - Reactors and cars burn wood fuel
+    - Unlock Lignumis via technology instead of script
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 07.01.2025

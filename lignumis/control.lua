@@ -14,7 +14,7 @@ end
 
 local function correct_space_locations()
     local force = game.forces.player
-    force.unlock_space_location("lignumis")
+    force.technologies["planet-discovery-lignumis"].researched = true
     if not force.technologies["planet-discovery-nauvis"].researched then
         force.lock_space_location("nauvis")
     end
