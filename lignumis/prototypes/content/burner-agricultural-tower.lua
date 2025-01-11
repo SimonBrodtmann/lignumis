@@ -62,7 +62,7 @@ data:extend({
         name = "burner-agricultural-tower",
         icon = "__lignumis__/graphics/icons/burner-agricultural-tower.png",
         subgroup = "agriculture",
-        order = "a[0-burner-agricultural-tower]",
+        order = "0[burner-agricultural-tower]",
         inventory_move_sound = item_sounds.mechanical_large_inventory_move,
         pick_sound = item_sounds.mechanical_large_inventory_pickup,
         drop_sound = item_sounds.mechanical_large_inventory_move,

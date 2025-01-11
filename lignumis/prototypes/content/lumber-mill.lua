@@ -21,7 +21,8 @@ LumberMill.EntityBuilder:new()
 
 local lumber_mill_item = LumberMill.ItemBuilder:new()
     :apply({
-        default_import_location = "lignumis"
+        default_import_location = "lignumis",
+        order = "b0[lumber-mill]"
     })
 
 LumberMill.RecipeBuilder:new()
