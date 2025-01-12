@@ -80,3 +80,7 @@ Unsorted
 [Krastorio 2 Assets](https://mods.factorio.com/mod/Krastorio2Assets)
 
 - Basic radar
+
+[Icons8](https://icons8.com)
+
+- [Mute icon](https://icons8.com/icon/9414/no-audio)

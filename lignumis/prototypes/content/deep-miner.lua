@@ -5,8 +5,8 @@ local entity = DeepMiner.EntityBuilder:new():build({
     resource_searching_radius = 0.49,
     energy_usage = "25MW",
     mining_speed = 15,
-    energySource = {
-        emissions_per_minute = { noise = 500 }
+    energy_source = {
+        emissions_per_minute = { noise = 2000 }
     },
     resource_drain_rate_percent = 75
 })

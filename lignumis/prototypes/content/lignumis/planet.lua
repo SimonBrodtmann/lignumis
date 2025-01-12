@@ -17,6 +17,11 @@ local nauvis_lignumis = {
 
 data:extend({
     {
+        type = "surface-property",
+        name = "pollution-type",
+        default_value = 0
+    },
+    {
         type = "planet",
         name = "lignumis",
         icon = "__lignumis__/graphics/icons/lignumis.png",
@@ -38,7 +43,8 @@ data:extend({
             departure = { "default-rocket-a" }
         },
         surface_properties = {
-            ["day-night-cycle"] = 1 * minute
+            ["day-night-cycle"] = 2 * minute,
+            ["pollution-type"] = 3
         },
         asteroid_spawn_influence = 1,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(nauvis_lignumis, 0.9),

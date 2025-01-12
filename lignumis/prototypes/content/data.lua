@@ -24,5 +24,6 @@ require("wood-logistics")
 require("basic-repair-pack")
 require("basic-radar")
 require("mid-game-recipes")
+require("active-noise-cancelling-tower")
 
 require("noise")

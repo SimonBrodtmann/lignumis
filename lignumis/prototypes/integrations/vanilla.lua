@@ -258,11 +258,11 @@ weapon_speed_technology_4.prerequisites = { "weapon-shooting-speed-3", "military
 
 local production_science_pack_technology = Technology:new("production-science-pack")
 production_science_pack_technology:replacePrerequisite("advanced-material-processing-2", "space-platform-thruster")
-production_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack" })
+production_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack", "space-science-pack" })
 
 local utility_science_pack_technology = Technology:new("utility-science-pack")
 utility_science_pack_technology:setPrerequisites({ "space-platform-thruster" })
-utility_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack" })
+utility_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack", "space-science-pack" })
 
 
 -- Equipment
@@ -273,6 +273,12 @@ data.raw["equipment-grid"]["small-equipment-grid"].width = 6
 data.raw["equipment-grid"]["small-equipment-grid"].height = 6
 data.raw["equipment-grid"]["medium-equipment-grid"].width = 8
 data.raw["equipment-grid"]["medium-equipment-grid"].height = 8
+
+
+-- Add pollution as surface property
+
+data.raw["planet"]["nauvis"].surface_properties["pollution-type"] = 1
+data.raw["planet"]["gleba"].surface_properties["pollution-type"] = 2
 
 
 -- Always show Nauvis icon

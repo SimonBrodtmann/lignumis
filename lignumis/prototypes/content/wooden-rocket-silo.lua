@@ -11,7 +11,7 @@ silo.energy_source = {
     fuel_categories = { "chemical" },
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = { noise = 1000 },
+    emissions_per_minute = { noise = 10000 },
     smoke = {
         {
             name = "smoke",
@@ -23,6 +23,7 @@ silo.energy_source = {
         }
     }
 }
+silo.emissions_per_second = { noise = 1000 / 60 }
 silo.energy_usage = "1MW"
 silo.rocket_entity = "provisional-rocket"
 silo.fixed_recipe = "provisional-rocket-part"
