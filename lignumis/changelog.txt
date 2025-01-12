@@ -1,7 +1,10 @@
 Version: 0.0.8
 Date: 12.01.2025
   Changes:
+    - Add mod "Astropinics"
+    - Update dependencies
     - Add mid-game items and balancing (a.k.a. coming back to Lignumis)
+    - Mark known incompatible mods as such until compatibility code is added
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 11.01.2025
