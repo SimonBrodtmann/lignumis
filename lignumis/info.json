@@ -16,6 +16,12 @@
         "mf-logistics >= 1.0.1",
         "wood-military >= 2.3.3",
         "Wood-Walls >= 1.2.0",
-        "?hot-metals >= 1.1.0"
+        "?hot-metals >= 1.1.0",
+        "!apm_power_ldinc",
+        "!alien-biomes",
+        "!wood-logistics",
+        "!wood-industry",
+        "!early-agriculture",
+        "!wood-universe-modpack"
     ]
 }
