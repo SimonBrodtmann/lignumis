@@ -21,9 +21,7 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Make coming back to Lignumis work
 - Add end-game stuff
-- Guarantee spawn of gold in starting area
 - Fix pipe graphics on desiccation furnace
 - Change color of gold soil
 - Ban huge rocks with coal from Nauvis
@@ -33,7 +31,8 @@ Sorted by priority
 Unsorted
 
 - Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
-- Compatibility with all wood mods from SafTheLamb
+- Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
+- Compatibility with all wood mods from [SafTheLamb](https://mods.factorio.com/user/SafTheLamb)
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Optimize images
