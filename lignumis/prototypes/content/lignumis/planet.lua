@@ -26,7 +26,7 @@ data:extend({
         distance = 16.5,
         orientation = 0.2625,
         magnitude = 0.35,
-        order = "a[lignumis]",
+        order = "0[lignumis]",
         subgroup = "planets",
         map_seed_offset = 100,
         map_gen_settings = planet_map_gen,

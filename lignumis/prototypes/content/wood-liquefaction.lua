@@ -38,7 +38,8 @@ data:extend({
         },
         results = {
             { type = "fluid", name = "wood-pulp", amount = 10 }
-        }
+        },
+        allow_productivity = true
     },
     {
         type = "technology",

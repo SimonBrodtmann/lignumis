@@ -72,6 +72,7 @@ local tree_plant = data.raw.plant["tree-plant"]
 tree_plant.growth_ticks = 5 * minute
 tree_plant.minable.results = { { type = "item", name = "wood", amount_min = 4, amount_max = 6 } }
 tree_plant.minable.count = nil
+table.insert(tree_plant.autoplace.tile_restriction, "natural-gold-soil")
 
 table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "wood-processing-or-assembling")
 table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "organic-or-assembling")
@@ -272,3 +273,10 @@ data.raw["equipment-grid"]["small-equipment-grid"].width = 6
 data.raw["equipment-grid"]["small-equipment-grid"].height = 6
 data.raw["equipment-grid"]["medium-equipment-grid"].width = 8
 data.raw["equipment-grid"]["medium-equipment-grid"].height = 8
+
+
+-- Always show Nauvis icon
+
+local nauvis = data.raw.planet["nauvis"]
+nauvis.flags = nauvis.flags or {}
+table.insert(nauvis.flags, "always-show")

@@ -1,3 +1,8 @@
+Version: 0.0.8
+Date: 12.01.2025
+  Changes:
+    - Add mid-game items and balancing (a.k.a. coming back to Lignumis)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 11.01.2025
   Changes:

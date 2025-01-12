@@ -19,7 +19,8 @@ data:extend({
         durability_description_key = "description.science-pack-remaining-amount-key",
         factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
         durability_description_value = "description.science-pack-remaining-amount-value",
-        random_tint_color = item_tints.iron_rust
+        random_tint_color = item_tints.iron_rust,
+        default_import_location = "lignumis"
     },
     {
         type = "recipe",
