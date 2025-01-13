@@ -19,11 +19,9 @@ data:extend({
         name = "noise",
         chart_color = { r = 183, g = 0, b = 225, a = 149 },
         icon = {
-            filename = "__core__/graphics/icons/mip/side-map-menu-buttons.png",
+            filename = "__lignumis__/graphics/noise-map-icon.png",
             priority = "high",
             size = 64,
-            mipmap_count = 2,
-            y = 3 * 64,
             flags = { "gui-icon" }
         },
         affects_evolution = true,
