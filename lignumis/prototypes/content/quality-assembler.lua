@@ -50,8 +50,23 @@ data:extend({
         fuel_value = "1MJ",
         weight = 1000 / 50 * kg,
     },
+    {
+        type = "recipe",
+        name = "gold-quality-catalyst",
+        category = "electromagnetics",
+        energy_required = 20,
+        ingredients = {
+            { type = "item", name = "gold-plate", amount = 10 },
+            { type = "item", name = "tungsten-carbide", amount = 2 },
+            { type = "item", name = "supercapacitor", amount = 2 }
+        },
+        results = { { type = "item", name = "gold-quality-catalyst", amount = 1 } },
+        allow_productivity = false,
+        enabled = false
+    },
     table.assign(table.deepcopy(data.raw.recipe["electromagnetic-plant"]), {
         name = "electromagnetic-plant-quality",
+        localised_name = { "entity-name.electromagnetic-plant" },
         category = "quality-assembling",
         hide_from_player_crafting = true,
         enabled = true
@@ -79,13 +94,31 @@ QualityAssembler.ItemBuilder:new():apply()
 
 QualityAssembler.RecipeBuilder:new()
     :ingredients({
-        { type = "item", name = "iron-plate", amount = 100 }
+        { type = "item", name = "gold-plate",        amount = 60 },
+        { type = "item", name = "tungsten-plate",    amount = 40 },
+        { type = "item", name = "superconductor",    amount = 50 },
+        { type = "item", name = "carbon-fiber",      amount = 100 },
+        { type = "item", name = "quantum-processor", amount = 10 }
     })
     :apply()
 
 QualityAssembler.TechnologyBuilder:new()
-    :prerequisites({ "automation-science-pack" })
-    :count(500)
-    :ingredients({ { "automation-science-pack", 1 } })
+    :prerequisites({ "legendary-quality", "quantum-processor" })
+    :count(5000)
+    :ingredients({
+        { "wood-science-pack",            1 },
+        { "steam-science-pack",           1 },
+        { "automation-science-pack",      1 },
+        { "logistic-science-pack",        1 },
+        { "chemical-science-pack",        1 },
+        { "space-science-pack",           1 },
+        { "production-science-pack",      1 },
+        { "utility-science-pack",         1 },
+        { "metallurgic-science-pack",     1 },
+        { "agricultural-science-pack",    1 },
+        { "electromagnetic-science-pack", 1 },
+        { "cryogenic-science-pack",       1 }
+    })
     :time(60)
+    :additionalRecipes({ "gold-quality-catalyst" })
     :apply()
