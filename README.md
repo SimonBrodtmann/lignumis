@@ -36,7 +36,6 @@ Unsorted
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Optimize images
-- Add noise to non-Lignumis entities brought in later
 - Add deep core mining
 - Add greenhouse
 
