@@ -25,5 +25,6 @@ require("basic-repair-pack")
 require("basic-radar")
 require("mid-game-recipes")
 require("active-noise-cancelling-tower")
+require("quality-assembler")
 
 require("noise")
