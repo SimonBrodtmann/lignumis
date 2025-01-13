@@ -4,6 +4,8 @@ Date: 13.01.2025
     - Add Active noise cancelling tower
     - Add noise emissions to non-Lignumis entities
     - Balance noise
+  Bug Fixes:
+    - Reduce Space Age dependency to latest stable release instead of experimental
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 12.01.2025
