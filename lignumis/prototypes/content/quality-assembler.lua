@@ -5,10 +5,6 @@ local QualityAssembler = QualityAssemblerFactory("quality-assembler")
 
 data:extend({
     {
-        type = "recipe-category",
-        name = "quality-assembling"
-    },
-    {
         type = "burner-usage",
         name = "quality-catalyst",
         empty_slot_sprite = {
@@ -54,23 +50,17 @@ data:extend({
         type = "recipe",
         name = "gold-quality-catalyst",
         category = "electromagnetics",
-        energy_required = 20,
+        energy_required = 60,
         ingredients = {
-            { type = "item", name = "gold-plate", amount = 10 },
+            { type = "item", name = "gold-plate",       amount = 10 },
             { type = "item", name = "tungsten-carbide", amount = 2 },
-            { type = "item", name = "supercapacitor", amount = 2 }
+            { type = "item", name = "supercapacitor",   amount = 2 }
         },
-        results = { { type = "item", name = "gold-quality-catalyst", amount = 1 } },
+        results = { { type = "item", name = "gold-quality-catalyst", amount = 2 } },
         allow_productivity = false,
+        allow_quality = false,
         enabled = false
-    },
-    table.assign(table.deepcopy(data.raw.recipe["electromagnetic-plant"]), {
-        name = "electromagnetic-plant-quality",
-        localised_name = { "entity-name.electromagnetic-plant" },
-        category = "quality-assembling",
-        hide_from_player_crafting = true,
-        enabled = true
-    })
+    }
 })
 
 QualityAssembler.EntityBuilder:new()
@@ -81,10 +71,10 @@ QualityAssembler.EntityBuilder:new()
         fuel_inventory_size = 1,
         emissions_per_minute = { noise = 100, pollution = 6 }
     })
+    :pipes()
     :apply({
-        crafting_categories = { "quality-assembling" },
         energy_usage = "1MW",
-        crafting_speed = 6,
+        crafting_speed = 4,
         module_slots = 6,
         allowed_effects = { "pollution", "quality" },
         effect_receiver = { base_effect = { quality = 10 } }
@@ -100,7 +90,9 @@ QualityAssembler.RecipeBuilder:new()
         { type = "item", name = "carbon-fiber",      amount = 100 },
         { type = "item", name = "quantum-processor", amount = 10 }
     })
-    :apply()
+    :apply({
+        category = "electromagnetics-or-quality-assembling",
+    })
 
 QualityAssembler.TechnologyBuilder:new()
     :prerequisites({ "legendary-quality", "quantum-processor" })
@@ -122,3 +114,63 @@ QualityAssembler.TechnologyBuilder:new()
     :time(60)
     :additionalRecipes({ "gold-quality-catalyst" })
     :apply()
+
+local function convert_category(name)
+    local quality_name = name .. "-or-quality-assembling"
+    data:extend({
+        {
+            type = "recipe-category",
+            name = quality_name
+        }
+    })
+    for _, assembler in pairs(data.raw["assembling-machine"]) do
+        if assembler.crafting_categories and table.contains(assembler.crafting_categories, name) then
+            table.insert(assembler.crafting_categories, quality_name)
+        end
+    end
+    table.insert(data.raw["assembling-machine"]["quality-assembler"].crafting_categories, quality_name)
+end
+
+convert_category("wood-processing-or-assembling")
+convert_category("metallurgy-or-assembling")
+convert_category("metallurgy")
+convert_category("electronics")
+convert_category("electronics-or-assembling")
+convert_category("electromagnetics")
+convert_category("organic-or-assembling")
+convert_category("crafting")
+convert_category("cryogenics-or-assembling")
+
+-- Lignumis
+data.raw.recipe["lumber-mill"].category = "wood-processing-or-assembling-or-quality-assembling"
+
+-- Nauvis
+data.raw.recipe["logistic-robot"].category = "crafting-or-quality-assembling"
+data.raw.recipe["construction-robot"].category = "crafting-or-quality-assembling"
+data.raw.recipe["roboport"].category = "crafting-or-quality-assembling"
+data.raw.recipe["speed-module-3"].category = "crafting-or-quality-assembling"
+data.raw.recipe["productivity-module-3"].category = "electronics-or-quality-assembling"
+data.raw.recipe["efficiency-module-3"].category = "electronics-or-quality-assembling"
+data.raw.recipe["rocket-silo"].category = "crafting-or-quality-assembling"
+data.raw.recipe["cargo-bay"].category = "crafting-or-quality-assembling"
+data.raw.recipe["asteroid-collector"].category = "crafting-or-quality-assembling"
+data.raw.recipe["thruster"].category = "crafting-or-quality-assembling"
+
+-- Vulcanus
+data.raw.recipe["foundry"].category = "metallurgy-or-assembling-or-quality-assembling"
+data.raw.recipe["big-mining-drill"].category = "metallurgy-or-quality-assembling"
+
+-- Fulgora
+data.raw.recipe["electromagnetic-plant"].category = "electronics-or-assembling-or-quality-assembling"
+data.raw.recipe["lightning-collector"].category = "electromagnetics-or-quality-assembling"
+data.raw.recipe["mech-armor"].category = "crafting-or-quality-assembling"
+data.raw.recipe["quality-module-3"].category = "electronics-or-quality-assembling"
+data.raw.recipe["recycler"].category = "crafting-or-quality-assembling"
+
+-- Gleba
+data.raw.recipe["biochamber"].category = "organic-or-assembling-or-quality-assembling"
+data.raw.recipe["stack-inserter"].category = "crafting-or-quality-assembling"
+data.raw.recipe["spidertron"].category = "crafting-or-quality-assembling"
+
+-- Aquilo
+data.raw.recipe["cryogenic-plant"].category = "cryogenics-or-assembling-or-quality-assembling"
