@@ -60,7 +60,12 @@ return {
                 ["green-bush-mini"] = {},
                 ["medium-rock"] = {},
                 ["small-rock"] = {},
-                ["tiny-rock"] = {}
+                ["tiny-rock"] = {},
+                ["knobbly-roots"] = {},
+                ["crater-large"] = {},
+                ["crater-small"] = {},
+                ["waves-decal"] = {},
+                ["gold-rock-cluster"] = {}
             }
         },
         ["entity"] = {

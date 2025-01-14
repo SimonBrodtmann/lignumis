@@ -5,7 +5,7 @@ stromatolite.name = "gold-stromatolite"
 stromatolite.icon = "__lignumis__/graphics/icons/gold-stromatolite.png"
 stromatolite.autoplace = {
     probability_expression =
-    "basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 2000000, input_scale = 1/8, output_scale = 1/3}",
+    "basis_noise{x = x, y = y, seed0 = map_seed, seed1 = 2000000, input_scale = 1/8, output_scale = 1/8}",
     tile_restriction = { "natural-gold-soil" }
 }
 stromatolite.collision_mask = table.deepcopy(data.raw["plant"]["tree-plant"].collision_mask)
