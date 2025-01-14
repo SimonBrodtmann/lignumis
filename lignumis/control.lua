@@ -55,10 +55,13 @@ script.on_event(e.on_player_created, function(event)
         surface.daytime = 0.7
 
         if player then
-            player.teleport(surface.find_non_colliding_position("character", { 0, 0 }, 0, 1) --[[@as MapPosition]], "lignumis")
+            player.teleport(surface.find_non_colliding_position("character", { 0, 0 }, 0, 1), "lignumis")
 
             if player.character then
                 player.character.destructible = false
+                local main_inventory = player.character.get_main_inventory()
+                main_inventory.insert({ name = "burner-mining-drill", count = 1 })
+                main_inventory.insert({ name = "burner-agricultural-tower", count = 2 })
             end
 
             if remote.interfaces.freeplay then
@@ -70,7 +73,8 @@ script.on_event(e.on_player_created, function(event)
                 local ship_items = { ["wood-darts-magazine"] = 8 }
                 local debris_items = { ["lumber"] = 8 }
 
-                crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items, table.deepcopy(storage.crashed_ship_parts))
+                crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items,
+                    table.deepcopy(storage.crashed_ship_parts))
                 util.remove_safe(player, storage.crashed_ship_items)
                 util.remove_safe(player, storage.crashed_debris_items)
 
