@@ -2,13 +2,13 @@ This mod extends the early game of Space Age by putting you on the moon "Lignumi
 
 The duration of the stay on Lignumis will be rather short. The impact of the later game will still be substantial (once implemented).
 
-## Alpha version
+## Beta version
 
-This is a very early version of the mod. It contains the complete idea of the moon from beginning to end but still needs a lot of features and polishing. Also end-game content and a reason to come back are still missing but are planned.
+This is an early version of the mod. It contains all the content that was originally planned but still needs some balancing and polishing.
 
-To not hinder development, I will not be considerate about breaking changes until I switch the status to "Beta".
+**Please help me finish this mod by giving me feedback of any kind (e.g. odd, missing or broken things, ideas to improve mechanics or progression or anything else that comes to your mind).**
 
-If you like to contribute in any way, feel free to contact me.
+If you like to contribute in any other way, feel free to contact me as well.
 
 ## Mod recommendations
 
@@ -21,23 +21,21 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Add end-game stuff
-- Fix pipe graphics on desiccation furnace
+- Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
+- Move pollution surface property to PlanetsLib
+- Fix pipe graphics on desiccation furnace, provisionary rocket silo and quality assembler
 - Change color of gold soil
 - Ban huge rocks with coal from Nauvis
 - Increase default moisture bias
 - Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your inventory)
-
-Unsorted
-
-- Integrate [PlanetsLib](https://mods.factorio.com/mod/PlanetsLib)
+- Add more description strings
+- Tweak all custom graphics colors
+- Optimize images
 - Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
 - Compatibility with all wood mods from [SafTheLamb](https://mods.factorio.com/user/SafTheLamb)
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
-- Optimize images
-- Add deep core mining
-- Add greenhouse
+- Revisit compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
 
 ## Credits
 
