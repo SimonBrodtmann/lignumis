@@ -7,7 +7,7 @@ local lignumis_chunks = 0.025
 local nauvis_lignumis = {
     probability_on_range_chunk = {
         { position = 0.1, probability = asteroid_util.nauvis_chunks, angle_when_stopped = asteroid_util.chunk_angle },
-        { position = 0.9, probability = lignumis_chunks, angle_when_stopped = asteroid_util.chunk_angle }
+        { position = 0.9, probability = lignumis_chunks,             angle_when_stopped = asteroid_util.chunk_angle }
     },
     type_ratios = {
         { position = 0.1, ratios = asteroid_util.nauvis_ratio },
@@ -15,24 +15,30 @@ local nauvis_lignumis = {
     }
 }
 
-data:extend({
-    {
-        type = "surface-property",
-        name = "pollution-type",
-        default_value = 0
-    },
+PlanetsLib:extend({
     {
         type = "planet",
         name = "lignumis",
+        orbit = {
+            parent = {
+                type = "planet",
+                name = "nauvis"
+            },
+            distance = 2,
+            orientation = 0.16,
+            sprite = {
+                type = "sprite",
+                filename = "__lignumis__/graphics/orbit-lignumis.png",
+                size = 131
+            },
+        },
+        magnitude = 0.35,
+        subgroup = "satellites",
         icon = "__lignumis__/graphics/icons/lignumis.png",
         starmap_icon = "__lignumis__/graphics/icons/starmap-planet-lignumis.png",
         starmap_icon_size = 512,
         gravity_pull = 4,
-        distance = 16.5,
-        orientation = 0.2625,
-        magnitude = 0.35,
-        order = "0[lignumis]",
-        subgroup = "planets",
+        order = "a[nauvis]-a[lignumis]",
         map_seed_offset = 100,
         map_gen_settings = planet_map_gen,
         pollutant_type = "noise",
@@ -64,42 +70,51 @@ data:extend({
         procession_graphic_catalogue = {
             {
                 index = procession_graphic_catalogue_types.planet_hatch_emission_in_1,
-                sprite = util.sprite_load("__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-A",
-                        {
-                            priority = "medium",
-                            draw_as_glow = true,
-                            blend_mode = "additive",
-                            scale = 0.5,
-                            shift = util.by_pixel(-16, 96) --32 x ({0.5, -3.5} + {0, 0.5})
-                        })
+                sprite = util.sprite_load(
+                    "__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-A",
+                    {
+                        priority = "medium",
+                        draw_as_glow = true,
+                        blend_mode = "additive",
+                        scale = 0.5,
+                        shift = util.by_pixel(-16, 96) --32 x ({0.5, -3.5} + {0, 0.5})
+                    })
             },
             {
                 index = procession_graphic_catalogue_types.planet_hatch_emission_in_2,
-                sprite = util.sprite_load("__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-B",
-                        {
-                            priority = "medium",
-                            draw_as_glow = true,
-                            blend_mode = "additive",
-                            scale = 0.5,
-                            shift = util.by_pixel(-64, 96) --32 x ({2, -3.5} + {0, 0.5})
-                        })
+                sprite = util.sprite_load(
+                    "__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-B",
+                    {
+                        priority = "medium",
+                        draw_as_glow = true,
+                        blend_mode = "additive",
+                        scale = 0.5,
+                        shift = util.by_pixel(-64, 96) --32 x ({2, -3.5} + {0, 0.5})
+                    })
             },
             {
                 index = procession_graphic_catalogue_types.planet_hatch_emission_in_3,
-                sprite = util.sprite_load("__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-C",
-                        {
-                            priority = "medium",
-                            draw_as_glow = true,
-                            blend_mode = "additive",
-                            scale = 0.5,
-                            shift = util.by_pixel(-40, 64) --32 x ({1.25, -2.5} + {0, 0.5})
-                        })
+                sprite = util.sprite_load(
+                    "__base__/graphics/entity/cargo-hubs/hatches/planet-lower-hatch-pod-emission-C",
+                    {
+                        priority = "medium",
+                        draw_as_glow = true,
+                        blend_mode = "additive",
+                        scale = 0.5,
+                        shift = util.by_pixel(-40, 64) --32 x ({1.25, -2.5} + {0, 0.5})
+                    })
             }
         }
     }
 })
+PlanetsLib.borrow_music(data.raw.planet["nauvis"], data.raw.planet["lignumis"])
 
 data:extend({
+    {
+        type = "surface-property",
+        name = "pollution-type",
+        default_value = 0
+    },
     {
         type = "space-connection",
         name = "nauvis-lignumis",

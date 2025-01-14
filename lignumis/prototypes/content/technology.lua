@@ -2,8 +2,7 @@ data:extend({
     {
         type = "technology",
         name = "planet-discovery-lignumis",
-        icons = util.technology_icon_constant_planet("__lignumis__/graphics/technology/lignumis.png"),
-        icon_size = 256,
+        icons = PlanetsLib.technology_icons_moon("__lignumis__/graphics/technology/lignumis.png", 256),
         essential = true,
         effects = {
             {
