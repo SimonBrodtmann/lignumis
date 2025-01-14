@@ -43,6 +43,7 @@ Sorted by priority
 
 - Lumber mill
 - Deep miner
+- Quality assembler
 
 [malcolmriley](https://github.com/malcolmriley/unused-renders)
 
