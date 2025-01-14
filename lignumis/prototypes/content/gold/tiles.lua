@@ -35,7 +35,7 @@ data:extend({
         walking_sound = semi_wet_sound,
         landing_steps_sound = tile_sounds.landing.semi_wet,
         build_sound = data.raw["tile"]["landfill"].build_sound,
-        map_color = { 185, 166, 5 },
+        map_color = { 109, 99, 13 },
         scorch_mark_color = { r = 0.329, g = 0.242 * 2, b = 0.177, a = 1.000 },
         autoplace = {
             probability_expression =
