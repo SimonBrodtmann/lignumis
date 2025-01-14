@@ -1,6 +1,6 @@
 return {
     aux_climate_control = false,
-    moisture_climate_control = false,
+    moisture_climate_control = true,
     property_expression_names = { -- Warning: anything set here overrides any selections made in the map setup screen so the options do nothing.
         --cliff_elevation = "cliff_elevation_nauvis",
         --cliffiness = "cliffiness_nauvis",
@@ -16,10 +16,11 @@ return {
         ["lignumis_peat"] = { richness = 1/2, frequency = 6, size = 2 },
         ["stone"] = { richness = 1/6, frequency = 4, size = 4 },
         ["water"] = {},
-        ["trees"] = {},
+        ["trees"] = { richness = 4, frequency = 4, size = 4 },
         ["enemy-base"] = {},
         ["rocks"] = {},
-        ["nauvis_cliff"] = {}
+        ["starting_area_moisture"] = { size = 1, richness = 6 },
+        ["nauvis_cliff"] = { frequency = 2, size = 2 }
     },
     autoplace_settings = {
         ["tile"] = {

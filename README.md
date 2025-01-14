@@ -26,7 +26,6 @@ Sorted by priority
 - Fix pipe graphics on desiccation furnace, provisionary rocket silo and quality assembler
 - Change color of gold soil
 - Ban huge rocks with coal from Nauvis
-- Increase default moisture bias
 - Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your inventory)
 - Add more description strings
 - Tweak all custom graphics colors
