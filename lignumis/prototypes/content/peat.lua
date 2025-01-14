@@ -35,7 +35,7 @@ data:extend({
                     name = "wood",
                     amount_min = 1,
                     amount_max = 8,
-                    probability = 0.05
+                    probability = 0.1
                 }
             }
         },
