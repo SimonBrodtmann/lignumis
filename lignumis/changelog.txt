@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 15.01.2025
+  Changes:
+    - Reduce trees in map generation a bit
+  Bug Fixes:
+    - Temporarily disables music on Lignumis because PlanetsLib 1.1.25 removes the function `PlanetsLib.borrow_music`
+    - Change locales for `surface-condition-too-low` and `surface-condition-too-high` to make sense for pollution surface condition
+---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 15.01.2025
   Changes:
