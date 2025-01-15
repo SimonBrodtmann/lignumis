@@ -16,7 +16,7 @@ return {
         ["lignumis_peat"] = { richness = 1/2, frequency = 6, size = 2 },
         ["stone"] = { richness = 1/6, frequency = 4, size = 4 },
         ["water"] = {},
-        ["trees"] = { richness = 4, frequency = 4, size = 4 },
+        ["trees"] = { richness = 2, frequency = 2, size = 3 },
         ["enemy-base"] = {},
         ["rocks"] = {},
         ["starting_area_moisture"] = { size = 1, richness = 6 },
