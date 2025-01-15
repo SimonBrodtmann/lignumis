@@ -1,3 +1,8 @@
+-- Wooden military mod replaces the content here
+if mods["wood-military"] then
+    return
+end
+
 local item_sounds = require("__base__.prototypes.item_sounds")
 local simulations = require("__base__.prototypes.factoriopedia-simulations")
 
