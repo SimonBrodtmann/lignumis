@@ -21,6 +21,7 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
+- Make wood-military optional
 - Move pollution surface property to PlanetsLib
 - Fix pipe graphics on desiccation furnace, provisionary rocket silo and quality assembler
 - Ban huge rocks with coal from Nauvis
