@@ -70,7 +70,17 @@ script.on_event(e.on_player_created, function(event)
                 storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
                 storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
 
-                local ship_items = { ["wood-darts-magazine"] = 8 }
+                local respawn_items = remote.call("freeplay", "get_respawn_items")
+                respawn_items["wood-darts-magazine"] = respawn_items["firearm-magazine"]
+                respawn_items["firearm-magazine"] = nil
+                remote.call("freeplay", "set_respawn_items", respawn_items)
+
+                local created_items = remote.call("freeplay", "get_created_items")
+                created_items["wood-darts-magazine"] = created_items["firearm-magazine"]
+                created_items["firearm-magazine"] = nil
+                remote.call("freeplay", "set_created_items", created_items)
+
+                local ship_items = { ["wood-darts-magazine"] = 2 }
                 local debris_items = { ["lumber"] = 8 }
 
                 crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items,

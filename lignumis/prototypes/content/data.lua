@@ -27,5 +27,6 @@ require("mid-game-recipes")
 require("active-noise-cancelling-tower")
 require("quality-assembler")
 require("decoratives")
+require("wood-military")
 
 require("noise")

@@ -21,8 +21,6 @@ The following mods can be a great addition for this mod:
 
 Sorted by priority
 
-- Make wood-military optional
-- Move pollution surface property to PlanetsLib
 - Fix pipe graphics on desiccation furnace, provisionary rocket silo and quality assembler
 - Ban huge rocks with coal from Nauvis
 - Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your inventory)
@@ -34,6 +32,7 @@ Sorted by priority
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Revisit compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
+- Move pollution surface property to separate mod
 
 ## Credits
 
