@@ -31,6 +31,18 @@ script.on_init(function()
         storage.disable_crashsite = remote.call("freeplay", "get_disable_crashsite")
         remote.call("freeplay", "set_disable_crashsite", true)
         remote.call("freeplay", "set_skip_intro", true)
+
+        if not script.active_mods["wood-military"] then
+            local respawn_items = remote.call("freeplay", "get_respawn_items")
+            respawn_items["wood-darts-magazine"] = respawn_items["firearm-magazine"]
+            respawn_items["firearm-magazine"] = nil
+            remote.call("freeplay", "set_respawn_items", respawn_items)
+
+            local created_items = remote.call("freeplay", "get_created_items")
+            created_items["wood-darts-magazine"] = created_items["firearm-magazine"]
+            created_items["firearm-magazine"] = nil
+            remote.call("freeplay", "set_created_items", created_items)
+        end
     end
 
     correct_space_locations()
@@ -69,16 +81,6 @@ script.on_event(e.on_player_created, function(event)
                 storage.crashed_debris_items = remote.call("freeplay", "get_debris_items")
                 storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
                 storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
-
-                local respawn_items = remote.call("freeplay", "get_respawn_items")
-                respawn_items["wood-darts-magazine"] = respawn_items["firearm-magazine"]
-                respawn_items["firearm-magazine"] = nil
-                remote.call("freeplay", "set_respawn_items", respawn_items)
-
-                local created_items = remote.call("freeplay", "get_created_items")
-                created_items["wood-darts-magazine"] = created_items["firearm-magazine"]
-                created_items["firearm-magazine"] = nil
-                remote.call("freeplay", "set_created_items", created_items)
 
                 local ship_items = { ["wood-darts-magazine"] = 2 }
                 local debris_items = { ["lumber"] = 8 }
