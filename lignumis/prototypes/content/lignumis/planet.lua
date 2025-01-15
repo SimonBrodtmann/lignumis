@@ -107,7 +107,7 @@ PlanetsLib:extend({
         }
     }
 })
-PlanetsLib.borrow_music(data.raw.planet["nauvis"], data.raw.planet["lignumis"])
+--PlanetsLib.borrow_music(data.raw.planet["nauvis"], data.raw.planet["lignumis"])
 
 data:extend({
     {
