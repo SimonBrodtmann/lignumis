@@ -113,6 +113,7 @@ data:extend({
         },
         energy_usage = "150kW",
         researching_speed = 0.5,
+        -- Applied again in final-fixes
         inputs = {
             "wood-science-pack",
             "steam-science-pack",
