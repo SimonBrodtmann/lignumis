@@ -14,8 +14,25 @@ If you like to contribute in any other way, feel free to contact me as well.
 
 The following mods can be a great addition for this mod:
 
-- [Burner Leech Fork](https://mods.factorio.com/mod/Burner-Leech-Fork)
-- [Hot metals](https://mods.factorio.com/mod/hot-metals)
+### [Burner Leech Fork](https://mods.factorio.com/mod/Burner-Leech-Fork)
+
+There will be fewer inserters that need to be fueled manually.
+
+### [Hot metals](https://mods.factorio.com/mod/hot-metals)
+
+If you like the idea that metals need to cool down after being smolten in a furnace, Lignumis gold has support for hot metals.
+
+### [Wooden Military](https://mods.factorio.com/mod/wood-military)
+
+If you want more of it than Lignumis offers, add this mod. It adds ammo for shotguns and there are settings for rockets and artillery shells.
+
+### [Wooden Industry](https://mods.factorio.com/mod/wood-industry)
+
+If you like go more into the charcoal direction. It has no overlap with Lignumis and starts to get relevant on Nauvis.
+
+### [Fulgora: Coralmium Agriculture](https://mods.factorio.com/mod/fulgora-coralmium-agriculture) and [Wooden Vulcanus: Sulfuric Bacteria](https://mods.factorio.com/mod/vulcanus-sulfuric-bacteria)
+
+For wood on the other planets.
 
 ## Todo
 
@@ -28,7 +45,6 @@ Sorted by priority
 - Tweak all custom graphics colors
 - Optimize images
 - Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
-- Compatibility with all wood mods from [SafTheLamb](https://mods.factorio.com/user/SafTheLamb)
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Revisit compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
