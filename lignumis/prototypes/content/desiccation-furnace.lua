@@ -1,4 +1,5 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local pipecovers = require("prototypes/content/gold/pipecovers")
 
 local furnace = table.deepcopy(data.raw.furnace["stone-furnace"])
 furnace.name = "desiccation-furnace"
@@ -6,7 +7,7 @@ furnace.fluid_boxes = {
     {
         volume = 50,
         pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
+        pipe_covers = pipecovers(),
         pipe_connections = {
             { flow_direction = "output", direction = defines.direction.east, position = { 0.5, 0.5 } }
         },

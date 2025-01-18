@@ -1,4 +1,5 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local pipecovers = require("prototypes/content/gold/pipecovers")
 
 local assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"])
 assembling_machine.name = "steam-assembling-machine"
@@ -29,7 +30,7 @@ assembling_machine.energy_source = {
     fluid_box = {
         production_type = "input",
         pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
+        pipe_covers = pipecovers(),
         volume = 50,
         pipe_connections = {
             { flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },

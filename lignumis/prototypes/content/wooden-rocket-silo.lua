@@ -1,7 +1,10 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local pipecovers = require("prototypes/content/gold/pipecovers")
+local machinepipes = require("prototypes/content/gold/machinepipes")
 
 local silo = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 silo.name = "provisional-rocket-silo"
+silo.icon = "__lignumis__/graphics/icons/provisional-rocket-silo.png"
 silo.module_slots = 0
 silo.allowed_effects = { "consumption", "pollution" }
 silo.minable = { mining_time = 1, result = "provisional-rocket-silo" }
@@ -32,19 +35,18 @@ silo.base_day_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo
 silo.base_front_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/14-rocket-silo-front.png"
 silo.fluid_boxes = {
     {
-        volume = 50,
-        pipe_picture = assembler2pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = {
-            { flow_direction = "input", direction = defines.direction.south, position = { -3.0, 4.0 } }
-        },
         production_type = "input",
-        secondary_draw_orders = { south = 110 }
+        pipe_picture = machinepipes(),
+        pipe_covers = pipecovers(),
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", direction = defines.direction.south, position = { -2, 4 } } },
+        secondary_draw_orders = { north = -1 }
     }
 }
+silo.fluid_boxes_off_when_no_fluid_recipe = true
 silo.launch_to_space_platforms = false
 silo.rocket_parts_storage_cap = 50
-silo.to_be_inserted_to_rocket_inventory_size = 1
+silo.to_be_inserted_to_rocket_inventory_size = 20
 
 local silo_item = table.deepcopy(data.raw["item"]["rocket-silo"])
 silo_item.name = "provisional-rocket-silo"

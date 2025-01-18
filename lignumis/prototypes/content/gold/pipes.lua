@@ -2,6 +2,7 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 local item_tints = require("__base__.prototypes.item-tints")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
+local pipecovers = require("prototypes/content/gold/pipecovers")
 
 function make_rotated_animation_variations_from_sheet(variation_count, sheet) --makes remnants work with more than 1 variation
     local result = {}
@@ -212,7 +213,7 @@ local tank = {
     damaged_trigger_effect = hit_effects.entity(),
     fluid_box = {
         volume = 10000,
-        pipe_covers = pipecoverspictures(),
+        pipe_covers = pipecovers(),
         pipe_connections = {
             { direction = defines.direction.north, position = { 0.5, -0.5 } },
             { direction = defines.direction.east,  position = { 0.5, -0.5 } },
