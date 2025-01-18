@@ -47,7 +47,7 @@ data.raw["unit"]["behemoth-spitter"].absorptions_to_join_attack.noise = 50
 -- All trees absorb noise
 
 for _, tree in pairs(data.raw.tree) do
-    emit_constant("plant", "tree-plant", -6)
+    emit_constant("tree", tree.name, -6)
 end
 emit_constant("plant", "tree-plant", -6)
 
