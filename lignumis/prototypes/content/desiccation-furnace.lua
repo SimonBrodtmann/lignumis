@@ -15,6 +15,7 @@ furnace.fluid_boxes = {
     }
 }
 furnace.crafting_categories = { "desiccation" }
+furnace.minable.result = "desiccation-furnace"
 
 furnace.fluid_boxes[1].pipe_covers.north.layers[1].filename =
 "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-north.png"
