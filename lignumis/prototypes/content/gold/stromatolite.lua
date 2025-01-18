@@ -147,7 +147,7 @@ plant.minable = {
     results = {
         { type = "item", name = "moist-stromatolite-remnant", amount_min = 23, amount_max = 37 },
         { type = "item", name = "gold-bacteria",              amount_min = 13, amount_max = 17 },
-        { type = "item", name = "gold-stromatolite-seed",     amount_min = 1,  amount_max = 2 }
+        { type = "item", name = "gold-stromatolite-seed",     amount_min = 1,  amount_max = 3 }
     }
 }
 plant.growth_ticks = 20 * minute
