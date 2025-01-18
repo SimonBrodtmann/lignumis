@@ -75,6 +75,7 @@ data:extend({
         type = "recipe",
         name = "basic-radar",
         category = "crafting-with-fluid",
+        energy_required = 10,
         ingredients = {
             { type = "item",  name = "stone-brick",       amount = 4 },
             { type = "item",  name = "wooden-gear-wheel", amount = 4 },
