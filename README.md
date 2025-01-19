@@ -22,6 +22,8 @@ There will be fewer inserters that need to be fueled manually.
 
 If you like the idea that metals need to cool down after being smolten in a furnace, Lignumis gold has support for hot metals.
 
+*Note that you'll have to insert gold plates manually into the provisional rocket silo when Hot metals is active (See https://forums.factorio.com/viewtopic.php?f=48&t=123081).*
+
 #### [Wooden Military](https://mods.factorio.com/mod/wood-military)
 
 If you want more of it than Lignumis offers, add this mod. It adds ammo for shotguns and there are settings for rockets and artillery shells.
