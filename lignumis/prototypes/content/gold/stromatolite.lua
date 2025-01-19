@@ -13,7 +13,7 @@ stromatolite.mining_time = 2
 stromatolite.minable.results = {
     { type = "item", name = "gold-ore",               amount_min = 1, amount_max = 7 },
     { type = "item", name = "gold-bacteria",          amount_min = 3, amount_max = 9 },
-    { type = "item", name = "gold-stromatolite-seed", amount = 1,     probability = 0.1 }
+    { type = "item", name = "gold-stromatolite-seed", amount = 1,     probability = 0.2 }
 }
 stromatolite.map_color = { 255, 171, 0, 0.5 }
 stromatolite.pictures = {
