@@ -40,7 +40,7 @@ For wood on the other planets.
 
 Sorted by priority
 
-- Fix pipe graphics on desiccation furnace, provisionary rocket silo and quality assembler
+- Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
 - Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your inventory)
 - Add more description strings
@@ -51,6 +51,8 @@ Sorted by priority
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 - Revisit compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
 - Move pollution surface property to separate mod
+- Trees must not die when absorbing noise
+  - https://lua-api.factorio.com/latest/types/TreeVariation.html
 
 ## Credits
 
