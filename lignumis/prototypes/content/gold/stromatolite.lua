@@ -243,10 +243,10 @@ local desiccation_recipe = {
     subgroup = "raw-material",
     order = "b0[desiccation]",
     energy_required = 9.6,
-    ingredients = { { type = "item", name = "moist-stromatolite-remnant", amount = 2 } },
+    ingredients = { { type = "item", name = "moist-stromatolite-remnant", amount = 5 } },
     results = {
         { type = "item",  name = "peat",  amount = 1 },
-        { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+        { type = "fluid", name = "steam", amount = 50, temperature = 165 }
     },
     enabled = false
 }
