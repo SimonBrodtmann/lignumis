@@ -1,8 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
-Date: 17.01.2025
+Date: 20.01.2025
   Changes:
     - Enable music for Lignumis again
+    - Lignumis buildings now have golden pipe connections
+    - Prevent other mods from adding science packs to wood lab
+    - Increase inventory slots of burner agricultural tower to 5
+    - Gold seeds are buffed to reduce ramp-up time of gold production
+    - Basic radar recipe now takes longer
+    - The amount of peat from gold stromatolite remnant is reduced
+  Bug Fixes:
+    - Non-planted trees didn't absorb noise
+    - Desiccation furnace was mined to regular furnace
+  Breaking Changes:
+    - The fluid input connection of the provisional rocket silo has been moved one tile to the right
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 17.01.2025
