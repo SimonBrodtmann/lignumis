@@ -28,6 +28,6 @@ data:extend({
         allow_as_intermediate = true,
         ingredients = { { type = "item", name = "wood", amount = 2 } },
         results = { { type = "item", name = "lumber", amount = 1 } },
-        energy_required = 2
+        energy_required = 1
     }
 })

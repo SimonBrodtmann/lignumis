@@ -15,7 +15,7 @@ LumberMill.EntityBuilder:new()
     :baseProductivity(0.5)
     :apply({
         crafting_categories = { "wood-processing-or-assembling" },
-        crafting_speed = 4,
+        crafting_speed = 2,
         energy_usage = "1000kW",
     })
 
