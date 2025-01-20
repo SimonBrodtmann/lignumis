@@ -50,6 +50,7 @@ script.on_init(function()
     storage.surface = game.planets["lignumis"].create_surface()
     storage.surface.request_to_generate_chunks({ 0, 0 }, 3)
     storage.surface.force_generate_chunk_requests()
+    storage.surface.daytime = 0.7
 end)
 
 script.on_event(e.on_player_created, function(event)
@@ -61,42 +62,39 @@ script.on_event(e.on_player_created, function(event)
     local player = game.get_player(event.player_index) --[[@as LuaPlayer]]
     local surface = storage.surface
 
-    if not storage.init then
-        storage.init = true
+    if player then
+        player.teleport(surface.find_non_colliding_position("character", { 0, 0 }, 0, 1), "lignumis")
 
-        surface.daytime = 0.7
-
-        if player then
-            player.teleport(surface.find_non_colliding_position("character", { 0, 0 }, 0, 1), "lignumis")
-
-            if player.character then
-                player.character.destructible = false
-                local main_inventory = player.character.get_main_inventory()
-                main_inventory.insert({ name = "burner-mining-drill", count = 1 })
-                main_inventory.insert({ name = "burner-agricultural-tower", count = 2 })
-            end
-
-            if remote.interfaces.freeplay then
-                storage.crashed_ship_items = remote.call("freeplay", "get_ship_items")
-                storage.crashed_debris_items = remote.call("freeplay", "get_debris_items")
-                storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
-                storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
-
-                local ship_items = { ["wood-darts-magazine"] = 2 }
-                local debris_items = { ["lumber"] = 8 }
-
-                crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items,
-                    table.deepcopy(storage.crashed_ship_parts))
-                util.remove_safe(player, storage.crashed_ship_items)
-                util.remove_safe(player, storage.crashed_debris_items)
-
-                player.get_main_inventory().sort_and_merge()
-
-                storage.crash_site_cutscene_active = true
-                crash_site.create_cutscene(player, { -5, -4 })
-            end
+        if player.character then
+            player.character.destructible = false
+            local main_inventory = player.character.get_main_inventory()
+            main_inventory.insert({ name = "burner-mining-drill", count = 1 })
+            main_inventory.insert({ name = "burner-agricultural-tower", count = 2 })
         end
 
+        if remote.interfaces.freeplay then
+            storage.crashed_ship_items = remote.call("freeplay", "get_ship_items")
+            storage.crashed_debris_items = remote.call("freeplay", "get_debris_items")
+            storage.crashed_ship_parts = remote.call("freeplay", "get_ship_parts")
+            storage.starting_message = remote.call("freeplay", "get_custom_intro_message")
+
+            local ship_items = { ["wood-darts-magazine"] = 2 }
+            local debris_items = { ["lumber"] = 8 }
+
+            crash_site.create_crash_site(surface, { -5, -6 }, ship_items, debris_items,
+                table.deepcopy(storage.crashed_ship_parts))
+            util.remove_safe(player, storage.crashed_ship_items)
+            util.remove_safe(player, storage.crashed_debris_items)
+
+            player.get_main_inventory().sort_and_merge()
+
+            storage.crash_site_cutscene_active = true
+            crash_site.create_cutscene(player, { -5, -4 })
+        end
+    end
+
+    if not storage.init then
+        storage.init = true
         chart_starting_area()
     end
 end)
