@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 20.01.2025
+  Changes:
+    - Halved energy required for lumber, halved speed of lumber mill
+    - Allow bringing 40 item stacks to Nauvis (currently it's only in the tooltip)
+    - Replace yellow belt with brown belt in electric lab recipe to prevent deadlock
+  Bug Fixes:
+    - Fix only first player being sent to Lignumis (probably)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 20.01.2025
   Changes:
