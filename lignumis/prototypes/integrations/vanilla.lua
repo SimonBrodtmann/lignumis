@@ -56,6 +56,13 @@ biolab.inputs = table.assign({
     "steam-science-pack"
 }, biolab.inputs)
 
+local lab_recipe = data.raw.recipe["lab"]
+for _, ingredient in pairs(lab_recipe.ingredients) do
+    if ingredient.name == "transport-belt" then
+        ingredient.name = "wood-transport-belt"
+    end
+end
+
 
 -- Wood processing
 
