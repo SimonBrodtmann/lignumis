@@ -5,7 +5,7 @@ for _, technology in pairs(data.raw.technology) do
     if technology.unit and technology.unit.ingredients and not table.contains(Lignumis.science_blacklist, technology.name) then
         local ingredients = technology.unit.ingredients
         local noMatches = table.filter(ingredients, function(ingredient)
-            return table.contains({ "wood-science-pack", "steam-science-pack" }, ingredient[1])
+            return table.contains({ "wood-science-pack", "steam-science-pack", "nanite-science-pack", "quantum-science-pack", "ring-science-pack" }, ingredient[1])
         end)
         local yesMatches = table.filter(ingredients, function(ingredient)
             return table.contains({ "utility-science-pack", "production-science-pack", "space-science-pack" }, ingredient[1])
