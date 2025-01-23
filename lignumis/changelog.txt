@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 23.01.2025
+  Changes:
+    - Add compatibility for "Metal and Stars" (thanks 5forsilver)
+    - Rename "Planet discovery Lignumis" to "Moon discovery Lignumis"
+---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 20.01.2025
   Bug Fixes:
