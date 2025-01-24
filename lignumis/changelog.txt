@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: ??.01.2025
+  Bug Fixes:
+    - Remove randomness from plants (thanks Atraxi; https://mods.factorio.com/mod/lignumis/discussion/67933ca99634a9d18f15f5af)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 23.01.2025
   Changes:
-    - Add compatibility for "Metal and Stars" (thanks 5forsilver)
+    - Add compatibility for "Metal and Stars" (thanks Atraxi)
     - Rename "Planet discovery Lignumis" to "Moon discovery Lignumis"
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
