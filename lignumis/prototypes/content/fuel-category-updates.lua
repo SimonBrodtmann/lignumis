@@ -16,13 +16,15 @@ local blacklist = {}
 
 function update_fuel_categories(t)
     for _, entity in pairs(t) do
-        if entity.energy_source
-            and entity.energy_source.type == "burner"
-            and not table.contains(blacklist, entity.name)
-            and entity.energy_source.fuel_categories
-            and table.contains(entity.energy_source.fuel_categories, "chemical")
-        then
-            table.insert(entity.energy_source.fuel_categories, "wood")
+        for _, energy_source in pairs({ "energy_source", "burner" }) do
+            if entity[energy_source]
+                and entity[energy_source].type == "burner"
+                and not table.contains(blacklist, entity.name)
+                and entity[energy_source].fuel_categories
+                and table.contains(entity[energy_source].fuel_categories, "chemical")
+            then
+                table.insert(entity[energy_source].fuel_categories, "wood")
+            end
         end
     end
 end
@@ -31,3 +33,4 @@ end
 update_fuel_categories(data.raw["boiler"])
 update_fuel_categories(data.raw["reactor"])
 update_fuel_categories(data.raw["car"])
+update_fuel_categories(data.raw["generator-equipment"])
