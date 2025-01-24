@@ -78,7 +78,7 @@ end
 
 local tree_plant = data.raw.plant["tree-plant"]
 tree_plant.growth_ticks = 5 * minute
-tree_plant.minable.results = { { type = "item", name = "wood", amount_min = 4, amount_max = 6 } }
+tree_plant.minable.results = { { type = "item", name = "wood", amount_min = 5, amount_max = 5 } }
 tree_plant.minable.count = nil
 table.insert(tree_plant.autoplace.tile_restriction, "natural-gold-soil")
 

@@ -145,9 +145,9 @@ plant.minable = {
     mining_particle = "copper-ore-particle",
     mining_time = 2,
     results = {
-        { type = "item", name = "moist-stromatolite-remnant", amount_min = 23, amount_max = 37 },
-        { type = "item", name = "gold-bacteria",              amount_min = 13, amount_max = 17 },
-        { type = "item", name = "gold-stromatolite-seed",     amount_min = 1,  amount_max = 3 }
+        { type = "item", name = "moist-stromatolite-remnant", amount_min = 30, amount_max = 30 },
+        { type = "item", name = "gold-bacteria",              amount_min = 15, amount_max = 15 },
+        { type = "item", name = "gold-stromatolite-seed",     amount_min = 2,  amount_max = 2 }
     }
 }
 plant.growth_ticks = 20 * minute
