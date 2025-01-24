@@ -19,7 +19,7 @@ agricultural_tower.energy_source = {
 }
 agricultural_tower.resistances = nil
 agricultural_tower.input_inventory_size = 1
-agricultural_tower.output_inventory_size = 5
+agricultural_tower.output_inventory_size = 3
 agricultural_tower.radius = 2
 
 local crane = agricultural_tower.crane
