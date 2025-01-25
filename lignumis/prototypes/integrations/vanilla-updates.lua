@@ -7,7 +7,8 @@ local whitelist = { "utility-science-pack", "production-science-pack", "space-sc
 -- Skip a technology if it cotains any of these science packs.
 local blacklist = {
     "wood-science-pack", "steam-science-pack", -- Lignumis
-    "nanite-science-pack", "quantum-science-pack", "ring-science-pack" -- Metal and Stars
+    "nanite-science-pack", "quantum-science-pack", "ring-science-pack", -- Metal and Stars
+    "cerys-science-pack"
 }
 
 for _, technology in pairs(data.raw.technology) do
