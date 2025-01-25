@@ -43,6 +43,18 @@ If you like go more into the charcoal direction. It has no overlap with Lignumis
 
 For wood on the other planets.
 
+## Compatibility with other planet mods
+
+The following planet mods are tested for (at least technical) compatibility:
+
+- [Cerys](https://mods.factorio.com/mod/Cerys-Moon-of-Fulgora)
+- [Corrundum](https://mods.factorio.com/mod/corrundum)
+- [Janus](https://mods.factorio.com/mod/janus)
+- [Maraxsis](https://mods.factorio.com/mod/maraxsis)
+- [Muluna](https://mods.factorio.com/mod/planet-muluna)
+- [Terra Palus](https://mods.factorio.com/mod/terrapalus)
+- [Secretas & Frozeta](https://mods.factorio.com/mod/secretas)
+
 ## Add compatibility to your mod
 
 Lignumis, by default, adds wood and steam science packs during `data-updates.lua` to all technologies that match certain

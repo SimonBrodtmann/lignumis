@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.8
-Date: ??.01.2025
+Date: 25.01.2025
+  Changes:
+    - Generator burner equipment can use wood as fuel
+    - Reduce output inventory slots of burner agricultural tower to 3
+    - Add mod support for science packs and custom labs
+    - Add compatibility code for Cerys
   Bug Fixes:
     - Remove randomness from plants (thanks Atraxi; https://mods.factorio.com/mod/lignumis/discussion/67933ca99634a9d18f15f5af)
 ---------------------------------------------------------------------------------------------------
