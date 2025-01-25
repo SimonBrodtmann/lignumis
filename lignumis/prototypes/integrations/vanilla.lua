@@ -44,18 +44,6 @@ data.raw.recipe["burner-inserter"].ingredients = {
 
 -- Lab
 
-local lab = data.raw["lab"]["lab"]
-lab.inputs = table.assign({
-    "wood-science-pack",
-    "steam-science-pack"
-}, lab.inputs)
-
-local biolab = data.raw["lab"]["biolab"]
-biolab.inputs = table.assign({
-    "wood-science-pack",
-    "steam-science-pack"
-}, biolab.inputs)
-
 local lab_recipe = data.raw.recipe["lab"]
 for _, ingredient in pairs(lab_recipe.ingredients) do
     if ingredient.name == "transport-belt" then
