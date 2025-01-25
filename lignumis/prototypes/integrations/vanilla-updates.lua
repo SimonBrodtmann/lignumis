@@ -8,7 +8,7 @@ local whitelist = { "utility-science-pack", "production-science-pack", "space-sc
 local blacklist = {
     "wood-science-pack", "steam-science-pack", -- Lignumis
     "nanite-science-pack", "quantum-science-pack", "ring-science-pack", -- Metal and Stars
-    "cerys-science-pack"
+    "cerys-science-pack", -- Cerys
 }
 
 for _, technology in pairs(data.raw.technology) do
