@@ -57,7 +57,7 @@ end
 
 
 ToNauvis.events[defines.events.on_rocket_launched] = function(event)
-    if not event.rocket_silo.name == "provisional-rocket-silo" then return end
+    if event.rocket_silo.name ~= "provisional-rocket-silo" then return end
 
     local rocket_entry
     local rocket_entry_index
@@ -67,7 +67,7 @@ ToNauvis.events[defines.events.on_rocket_launched] = function(event)
         if entry.real_silo == event.rocket_silo then
             rocket_entry = entry
             rocket_entry_index = i
-            player = game.get_player(entry.player)
+            player = entry.player and game.get_player(entry.player) or game.players[1]
             break
         end
     end
@@ -77,11 +77,13 @@ ToNauvis.events[defines.events.on_rocket_launched] = function(event)
     init_freeplay()
 
     -- Give the player the content of the rocket
-    local inventory = player.get_main_inventory()
-    for _, item in pairs(rocket_entry.rocket_content) do
-        inventory.insert(item)
+    if rocket_entry.rocket_content then
+        local inventory = player.get_main_inventory()
+        for _, item in pairs(rocket_entry.rocket_content) do
+            inventory.insert(item)
+        end
+        inventory.sort_and_merge()
     end
-    inventory.sort_and_merge()
     table.remove(storage.rocket_silos, rocket_entry_index)
 end
 
