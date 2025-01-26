@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 26.01.2025
+  Bug Fixes:
+    - Fix transition to Nauvis for existing saves
+    - Fix provisional rocket silo only needing 1 rocket part
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 26.01.2025
   Bug Fixes:
