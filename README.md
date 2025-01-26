@@ -83,14 +83,16 @@ Sorted by priority
 - Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
 - Add more description strings
-- Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
-- Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
-- Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
-- Revisit compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
 - Move pollution surface property to separate mod
 - Trees must not die when absorbing noise
     - https://lua-api.factorio.com/latest/types/TreeVariation.html
 - Improve transition to Nauvis a bit more
+- Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
+- Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
+- Compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
+- Compatibility with [On Wayward Seas](https://mods.factorio.com/mod/wayward-seas)
+- Compatibility with [Planet Picker](https://mods.factorio.com/mod/planet-picker)
+- Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
 
 ## Credits
 
