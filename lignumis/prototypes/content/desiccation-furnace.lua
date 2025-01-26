@@ -1,12 +1,17 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 local pipecovers = require("prototypes/content/gold/pipecovers")
+local machinepipes = require("prototypes/content/gold/machinepipes")
 
 local furnace = table.deepcopy(data.raw.furnace["stone-furnace"])
 furnace.name = "desiccation-furnace"
+furnace.icons = {
+    { icon = "__lignumis__/graphics/icons/stone-furnace.png" },
+    { icon = "__base__/graphics/icons/fluid/steam.png",      scale = 0.25, shift = { 8, -8 } }
+}
 furnace.fluid_boxes = {
     {
         volume = 50,
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = machinepipes(),
         pipe_covers = pipecovers(),
         pipe_connections = {
             { flow_direction = "output", direction = defines.direction.east, position = { 0.5, 0.5 } }
@@ -16,6 +21,7 @@ furnace.fluid_boxes = {
 }
 furnace.crafting_categories = { "desiccation" }
 furnace.minable.result = "desiccation-furnace"
+furnace.graphics_set.animation.layers[1].filename = "__lignumis__/graphics/entity/stone-furnace/stone-furnace.png"
 
 furnace.fluid_boxes[1].pipe_covers.north.layers[1].filename =
 "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-north.png"
@@ -30,7 +36,7 @@ local furnace_item = {
     type = "item",
     name = "desiccation-furnace",
     icons = {
-        { icon = "__base__/graphics/icons/stone-furnace.png" },
+        { icon = "__lignumis__/graphics/icons/stone-furnace.png" },
         { icon = "__base__/graphics/icons/fluid/steam.png", scale = 0.25, shift = { 8, -8 } }
     },
     subgroup = "smelting-machine",

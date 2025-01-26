@@ -1,5 +1,6 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 local pipecovers = require("prototypes/content/gold/pipecovers")
+local machinepipes = require("prototypes/content/gold/machinepipes")
 
 local gfx = "__lignumis__/graphics/entity/steam-assembling-machine/"
 
@@ -31,7 +32,7 @@ assembling_machine.energy_source = {
     scale_fluid_usage = true,
     fluid_box = {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = machinepipes(),
         pipe_covers = pipecovers(),
         volume = 50,
         pipe_connections = {
@@ -41,6 +42,10 @@ assembling_machine.energy_source = {
         secondary_draw_orders = { north = -1 }
     }
 }
+assembling_machine.fluid_boxes[1].pipe_picture = machinepipes()
+assembling_machine.fluid_boxes[1].pipe_covers = pipecovers()
+assembling_machine.fluid_boxes[2].pipe_picture = machinepipes()
+assembling_machine.fluid_boxes[2].pipe_covers = pipecovers()
 
 local remnants = table.deepcopy(data.raw["corpse"]["assembling-machine-1-remnants"])
 remnants.name = "steam-assembling-machine-remnants"

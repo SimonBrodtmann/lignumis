@@ -42,6 +42,17 @@ data.raw.recipe["burner-inserter"].ingredients = {
 }
 
 
+-- Stone furnace
+
+local stone_furnace = data.raw["furnace"]["stone-furnace"]
+stone_furnace.icon = "__lignumis__/graphics/icons/stone-furnace.png"
+stone_furnace.graphics_set.animation.layers[1].filename = "__lignumis__/graphics/entity/stone-furnace/stone-furnace.png"
+
+local stone_furnace_remnants = data.raw["corpse"]["stone-furnace-remnants"]
+stone_furnace_remnants.icon = "__lignumis__/graphics/icons/stone-furnace.png"
+stone_furnace_remnants.animation[1].filename = "__lignumis__/graphics/entity/stone-furnace/stone-furnace-remnants.png"
+
+
 -- Lab
 
 local lab_recipe = data.raw.recipe["lab"]

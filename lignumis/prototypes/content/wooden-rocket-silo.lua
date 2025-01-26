@@ -1,4 +1,3 @@
-local item_sounds = require("__base__.prototypes.item_sounds")
 local pipecovers = require("prototypes/content/gold/pipecovers")
 local machinepipes = require("prototypes/content/gold/machinepipes")
 
@@ -30,9 +29,12 @@ silo.emissions_per_second = { noise = 1000 / 60 }
 silo.energy_usage = "1MW"
 silo.rocket_entity = "provisional-rocket"
 silo.fixed_recipe = "provisional-rocket-part"
---silo.door_opening_speed = 1 / (20 * 60)
+silo.door_opening_speed = 1 / (20 * 60)
 silo.base_day_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/06-rocket-silo.png"
 silo.base_front_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/14-rocket-silo-front.png"
+silo.arm_01_back_animation.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/08-rocket-silo-arms-back.png"
+silo.arm_02_right_animation.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/08-rocket-silo-arms-right.png"
+silo.arm_03_front_animation.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/13-rocket-silo-arms-front.png"
 silo.fluid_boxes = {
     {
         production_type = "input",
@@ -73,10 +75,10 @@ silo_recipe.ingredients = {
 local rocket = table.deepcopy(data.raw["rocket-silo-rocket"]["rocket-silo-rocket"])
 rocket.name = "provisional-rocket"
 rocket.inventory_size = 40
---rocket.rising_speed = 1 / (14 * 60)
---rocket.engine_starting_speed = 1 / (11 * 60)
---rocket.flying_speed = 1 / (4000 * 60)
---rocket.flying_acceleration = 0.005
+rocket.rising_speed = 1 / (14 * 60)
+rocket.engine_starting_speed = 1 / (11 * 60)
+rocket.flying_speed = 1 / (4000 * 60)
+rocket.flying_acceleration = 0.005
 rocket.rocket_sprite.layers[1].filename = "__lignumis__/graphics/entity/wooden-rocket-silo/rocket-static-pod.png"
 
 local rocket_part_recipe = {
@@ -118,168 +120,6 @@ local silo_ready = {
     flags = { "not-on-map", "not-blueprintable", "not-deconstructable", "not-flammable", "not-repairable", "not-upgradable", "no-automated-item-insertion", "no-automated-item-removal", "not-in-kill-statistics" },
     allow_copy_paste = false,
     additional_pastable_entities = { "provisional-rocket-silo" },
-    --picture = {
-    --    layers = {
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole.png",
-    --            width = 400,
-    --            height = 270,
-    --            shift = util.by_pixel(-5, 16),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/00-rocket-silo-shadow.png",
-    --            priority = "medium",
-    --            width = 612,
-    --            height = 578,
-    --            draw_as_shadow = true,
-    --            dice = 2,
-    --            shift = util.by_pixel(7, 2),
-    --            scale = 0.5
-    --        },
-    --        --{
-    --        --    filename = "__base__/graphics/entity/rocket-silo/04-door-back.png",
-    --        --    width = 312,
-    --        --    height = 286,
-    --        --    shift = util.by_pixel(37, 12),
-    --        --    scale = 0.5
-    --        --},
-    --        --{
-    --        --    filename = "__base__/graphics/entity/rocket-silo/05-door-front.png",
-    --        --    width = 332,
-    --        --    height = 300,
-    --        --    shift = util.by_pixel(-28, 33),
-    --        --    scale = 0.5
-    --        --},
-    --        {
-    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/06-rocket-silo.png",
-    --            dice_y = 3,
-    --            width = 608,
-    --            height = 596,
-    --            shift = util.by_pixel(3, -1),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { 1.34375, 0.28125 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { 2.3125, 0.9375 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { 2.65625, 1.90625 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { -2.65625, 1.90625 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { -2.3125, 0.9375 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { -1.34375, 0.28125 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
-    --            width = 32,
-    --            height = 32,
-    --            shift = { 0, 0 - 1.375 },
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
-    --            priority = "medium",
-    --            width = 128,
-    --            height = 150,
-    --            x = 3968,
-    --            animation_speed = 0.3,
-    --            shift = util.by_pixel(-53, -84),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-right.png",
-    --            priority = "medium",
-    --            width = 182,
-    --            height = 188,
-    --            x = 5642,
-    --            animation_speed = 0.3,
-    --            shift = util.by_pixel(101, -38),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/rocket-static-pod-shadow.png",
-    --            priority = "medium",
-    --            width = 738,
-    --            height = 214,
-    --            shift = util.by_pixel(160.5, 23.5),
-    --            draw_as_shadow = true,
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/rocket-static-pod.png",
-    --            priority = "medium",
-    --            width = 308,
-    --            height = 602,
-    --            shift = util.by_pixel(-4, -41.25),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/rocket-static-emission.png",
-    --            width = 306,
-    --            height = 518,
-    --            shift = util.by_pixel(-4, -4.25),
-    --            draw_as_glow = true,
-    --            blend_mode = "additive",
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-shadow-over-rocket.png",
-    --            width = 426,
-    --            height = 288,
-    --            shift = util.by_pixel(-2, 21),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/14-rocket-silo-front.png",
-    --            width = 580,
-    --            height = 262,
-    --            shift = util.by_pixel(-1, 78),
-    --            scale = 0.5
-    --        },
-    --        {
-    --            filename = "__base__/graphics/entity/rocket-silo/13-rocket-silo-arms-front.png",
-    --            priority = "medium",
-    --            width = 126,
-    --            height = 228,
-    --            x = 3906,
-    --            animation_speed = 0.3,
-    --            shift = util.by_pixel(-51, 16),
-    --            scale = 0.5
-    --        }
-    --    }
-    --},
     collision_mask = { layers = {} },
     collision_box = table.deepcopy(silo.collision_box),
     selection_box = table.deepcopy(silo.selection_box),
