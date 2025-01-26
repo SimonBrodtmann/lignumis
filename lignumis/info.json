@@ -1,8 +1,8 @@
 {
     "name": "lignumis",
-    "version": "0.9.8",
-    "title": "Lignumis (Beta)",
-    "description": "Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies. Warning: This is an early development version. Breaking changes will happen.",
+    "version": "1.0.0",
+    "title": "Lignumis",
+    "description": "Dive into the world of Lignumis, a moon of Nauvis offering only the most basic technologies.",
     "author": "cackling fiend",
     "homepage": "https://discord.gg/5bevXf5W",
     "factorio_version": "2.0",

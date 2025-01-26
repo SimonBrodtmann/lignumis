@@ -2,14 +2,6 @@ This mod extends the early game of Space Age by putting you on the moon "Lignumi
 
 The duration of the stay on Lignumis will be rather short. The impact of the later game will still be substantial (once implemented).
 
-## Beta version
-
-This is an early version of the mod. It contains all the content that was originally planned but still needs some balancing and polishing.
-
-**Please help me finish this mod by giving me feedback of any kind (e.g. odd, missing or broken things, ideas to improve mechanics or progression or anything else that comes to your mind).**
-
-If you like to contribute in any other way, feel free to contact me as well.
-
 ## Mod recommendations
 
 The following mods can be a great addition for this mod:
@@ -90,8 +82,6 @@ Sorted by priority
 
 - Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
-- Create proper experience for the transition to Nauvis with a custom UI with launch button (and don't allow taking your
-  inventory)
 - Add more description strings
 - Tweak all custom graphics colors
 - Optimize images
@@ -102,12 +92,13 @@ Sorted by priority
 - Move pollution surface property to separate mod
 - Trees must not die when absorbing noise
     - https://lua-api.factorio.com/latest/types/TreeVariation.html
+- Improve transition to Nauvis a bit more
 
 ## Credits
 
 ### Translations
 
-- zh-CN: cyx2015s
+- Simplified chinese (zh-CN): cyx2015s
 
 ### Assets
 
