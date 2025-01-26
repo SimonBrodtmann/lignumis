@@ -30,7 +30,7 @@ turret.folding_animation.layers[1].filename =
 "__lignumis__/graphics/entity/basic-gun-turret/basic-gun-turret-raising.png"
 turret.graphics_set.base_visualisation.animation.layers[1].filename =
 "__lignumis__/graphics/entity/basic-gun-turret/basic-gun-turret-base.png"
-turret.attack_parameters.range = 16
+turret.attack_parameters.range = 18
 
 local turret_item = {
     type = "item",

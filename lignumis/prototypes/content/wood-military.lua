@@ -42,8 +42,7 @@ data:extend({
         icon = "__lignumis__/graphics/icons/wood-darts-magazine.png",
         ammo_category = "bullet",
         ammo_type = {
-            range_modifier = 0.85,
-            cooldown_modifier = 1 / 0.85,
+            cooldown_modifier = 1 / 0.75,
             action = {
                 type = "direct",
                 action_delivery = {

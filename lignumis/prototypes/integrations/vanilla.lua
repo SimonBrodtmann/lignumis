@@ -63,6 +63,10 @@ for _, ingredient in pairs(lab_recipe.ingredients) do
 end
 
 
+-- Gun turret
+data.raw["ammo-turret"]["gun-turret"].attack_parameters.range = 20
+
+
 -- Wood processing
 
 local wood_processing = data.raw.recipe["wood-processing"]
