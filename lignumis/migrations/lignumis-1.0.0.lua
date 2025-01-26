@@ -11,7 +11,7 @@ local lignumis = game.planets["lignumis"].surface
 for _, silo in pairs(lignumis.find_entities_filtered { name = "provisional-rocket-silo" }) do
     local found = false
     for _, entry in pairs(storage.rocket_silos) do
-        if entry.real_silo == silo then
+        if type(entry) == "table" and entry.real_silo == silo then
             found = true
             break
         end
