@@ -33,10 +33,6 @@ data:extend({
                 use_icon_overlay_constant = true
             },
             {
-                type = "unlock-recipe",
-                recipe = "destination-nauvis"
-            },
-            {
                 type = "unlock-space-platforms",
                 modifier = true,
                 hidden = true

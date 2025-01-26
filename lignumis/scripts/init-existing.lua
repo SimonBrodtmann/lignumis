@@ -4,9 +4,7 @@ local InitExisting = {}
 -- Don't send players to Lignumis but instead print a warning
 
 InitExisting.on_init = function()
-    if game.tick == 0 then
-        return
-    end
+    if game.tick == 0 then return end
 
     storage.init = {}
     for _, player in pairs(game.players) do

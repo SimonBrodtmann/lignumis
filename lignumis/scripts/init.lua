@@ -23,9 +23,7 @@ end
 local function init_player(event)
     local player = game.get_player(event.player_index)
 
-    if not player.character then
-        return
-    end
+    if not player.character then return end
 
     local surface = storage.surface or game.planets["lignumis"].surface
     player.teleport(surface.find_non_colliding_position("character", { 0, 0 }, 0, 1), "lignumis")
@@ -41,9 +39,7 @@ end
 local function init_freeplay(event)
     local player = game.get_player(event.player_index)
 
-    if not player or not remote.interfaces.freeplay then
-        return
-    end
+    if not player or not remote.interfaces.freeplay then return end
 
     local surface = storage.surface or game.planets["lignumis"].surface
     storage.crashed_ship_items = remote.call("freeplay", "get_ship_items")
@@ -75,9 +71,7 @@ Init.events[defines.events.on_player_created] = function(event)
     migrate_0_9_6(event)
     storage.init = storage.init or {}
 
-    if storage.init[event.player_index] then
-        return
-    end
+    if storage.init[event.player_index] then return end
 
     storage.init[event.player_index] = true
     init_player(event)
@@ -96,19 +90,13 @@ end
 
 -- End intro and show starting message
 Init.events[defines.events.on_cutscene_waypoint_reached] = function(event)
-    if not storage.crash_site_cutscene_active then
-        return
-    end
-    if not crash_site.is_crash_site_cutscene(event) then
-        return
-    end
+    if not storage.crash_site_cutscene_active then return end
+    if not crash_site.is_crash_site_cutscene(event) then return end
 
     local player = game.get_player(event.player_index)
     player.exit_cutscene()
 
-    if storage.skip_intro then
-        return
-    end
+    if storage.skip_intro then return end
 
     local intro_message = storage.custom_intro_message or { "msg-intro-space-age" }
 
@@ -122,12 +110,9 @@ end
 
 -- Cancel intro
 Init.events["crash-site-skip-cutscene"] = function(event)
-    if not storage.crash_site_cutscene_active then
-        return
-    end
-    if event.player_index ~= 1 then
-        return
-    end
+    if not storage.crash_site_cutscene_active then return end
+    if event.player_index ~= 1 then return end
+
     local player = game.get_player(event.player_index)
     if player.controller_type == defines.controllers.cutscene then
         player.exit_cutscene()
@@ -135,12 +120,9 @@ Init.events["crash-site-skip-cutscene"] = function(event)
 end
 
 Init.events[defines.events.on_cutscene_cancelled] = function(event)
-    if not storage.crash_site_cutscene_active then
-        return
-    end
-    if event.player_index ~= 1 then
-        return
-    end
+    if not storage.crash_site_cutscene_active then return end
+    if event.player_index ~= 1 then return end
+
     storage.crash_site_cutscene_active = nil
     local player = game.get_player(event.player_index)
     if player.gui.screen.skip_cutscene_label then

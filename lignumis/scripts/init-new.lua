@@ -6,9 +6,7 @@ local InitNew = {}
 
 -- Initialize the freeplay intro
 local function init_intro()
-    if not remote.interfaces.freeplay then
-        return
-    end
+    if not remote.interfaces.freeplay then return end
 
     -- Disable Nauvis intro
     remote.call("freeplay", "set_disable_crashsite", true)
@@ -63,9 +61,7 @@ end
 
 
 InitNew.on_init = function()
-    if game.tick > 0 then
-        return
-    end
+    if game.tick > 0 then return end
 
     init_intro()
     init_space_locations()

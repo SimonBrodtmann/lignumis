@@ -9,6 +9,7 @@
     "dependencies": [
         "base",
         "space-age >= 2.0.28",
+        "flib",
         "PlanetsLib >= 1.1.26",
         "astroponics >= 1.2.0",
         "cf-lib >= 0.0.2",

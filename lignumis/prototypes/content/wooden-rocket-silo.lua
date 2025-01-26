@@ -6,7 +6,7 @@ local silo = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 silo.name = "provisional-rocket-silo"
 silo.icon = "__lignumis__/graphics/icons/provisional-rocket-silo.png"
 silo.module_slots = 0
-silo.allowed_effects = { "consumption", "pollution" }
+silo.allowed_effects = { "consumption", "pollution", "speed" }
 silo.minable = { mining_time = 1, result = "provisional-rocket-silo" }
 silo.max_health = 1000
 silo.energy_source = {
@@ -30,7 +30,7 @@ silo.emissions_per_second = { noise = 1000 / 60 }
 silo.energy_usage = "1MW"
 silo.rocket_entity = "provisional-rocket"
 silo.fixed_recipe = "provisional-rocket-part"
-silo.door_opening_speed = 1 / (20 * 60)
+--silo.door_opening_speed = 1 / (20 * 60)
 silo.base_day_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/06-rocket-silo.png"
 silo.base_front_sprite.filename = "__lignumis__/graphics/entity/wooden-rocket-silo/14-rocket-silo-front.png"
 silo.fluid_boxes = {
@@ -45,8 +45,13 @@ silo.fluid_boxes = {
 }
 silo.fluid_boxes_off_when_no_fluid_recipe = true
 silo.launch_to_space_platforms = false
-silo.rocket_parts_storage_cap = 50
-silo.to_be_inserted_to_rocket_inventory_size = 20
+silo.rocket_parts_required = 1
+silo.rocket_parts_storage_cap = 1
+silo.to_be_inserted_to_rocket_inventory_size = 1
+silo.clamps_on_trigger = {
+    type = "script",
+    effect_id = "provisional-rocket-ready"
+}
 
 local silo_item = table.deepcopy(data.raw["item"]["rocket-silo"])
 silo_item.name = "provisional-rocket-silo"
@@ -67,10 +72,11 @@ silo_recipe.ingredients = {
 
 local rocket = table.deepcopy(data.raw["rocket-silo-rocket"]["rocket-silo-rocket"])
 rocket.name = "provisional-rocket"
-rocket.rising_speed = 1 / (14 * 60)
-rocket.engine_starting_speed = 1 / (11 * 60)
-rocket.flying_speed = 1 / (4000 * 60)
-rocket.flying_acceleration = 0.005
+rocket.inventory_size = 40
+--rocket.rising_speed = 1 / (14 * 60)
+--rocket.engine_starting_speed = 1 / (11 * 60)
+--rocket.flying_speed = 1 / (4000 * 60)
+--rocket.flying_acceleration = 0.005
 rocket.rocket_sprite.layers[1].filename = "__lignumis__/graphics/entity/wooden-rocket-silo/rocket-static-pod.png"
 
 local rocket_part_recipe = {
@@ -92,28 +98,198 @@ local rocket_part_recipe = {
     allow_productivity = true
 }
 
-local nauvis_item = {
-    type = "item",
-    name = "destination-nauvis",
-    icon = "__base__/graphics/icons/nauvis.png",
-    subgroup = "space-related",
-    order = "z[destination-nauvis]",
-    inventory_move_sound = item_sounds.mechanical_inventory_move,
-    pick_sound = item_sounds.mechanical_inventory_pickup,
-    drop_sound = item_sounds.mechanical_inventory_move,
-    stack_size = 1,
-    weight = 1 * tons,
-    send_to_orbit_mode = "automated",
-    spoil_ticks = 60 * 60 * 10
+local silo_ready = {
+    type = "container",
+    name = "provisional-rocket-silo-ready",
+    icon = silo.icon,
+    minable = { mining_time = 1, result = nil },
+    deconstruction_alternative = "provisional-rocket-silo",
+    inventory_size = 40,
+    inventory_type = "normal",
+    quality_affects_inventory_size = false,
+    placeable_by = { item = "provisional-rocket-silo", count = 1 },
+    health = 1000,
+    surface_conditions = {
+        {
+            property = "pressure",
+            min = 1
+        }
+    },
+    flags = { "not-on-map", "not-blueprintable", "not-deconstructable", "not-flammable", "not-repairable", "not-upgradable", "no-automated-item-insertion", "no-automated-item-removal", "not-in-kill-statistics" },
+    allow_copy_paste = false,
+    additional_pastable_entities = { "provisional-rocket-silo" },
+    --picture = {
+    --    layers = {
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/01-rocket-silo-hole.png",
+    --            width = 400,
+    --            height = 270,
+    --            shift = util.by_pixel(-5, 16),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/00-rocket-silo-shadow.png",
+    --            priority = "medium",
+    --            width = 612,
+    --            height = 578,
+    --            draw_as_shadow = true,
+    --            dice = 2,
+    --            shift = util.by_pixel(7, 2),
+    --            scale = 0.5
+    --        },
+    --        --{
+    --        --    filename = "__base__/graphics/entity/rocket-silo/04-door-back.png",
+    --        --    width = 312,
+    --        --    height = 286,
+    --        --    shift = util.by_pixel(37, 12),
+    --        --    scale = 0.5
+    --        --},
+    --        --{
+    --        --    filename = "__base__/graphics/entity/rocket-silo/05-door-front.png",
+    --        --    width = 332,
+    --        --    height = 300,
+    --        --    shift = util.by_pixel(-28, 33),
+    --        --    scale = 0.5
+    --        --},
+    --        {
+    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/06-rocket-silo.png",
+    --            dice_y = 3,
+    --            width = 608,
+    --            height = 596,
+    --            shift = util.by_pixel(3, -1),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { 1.34375, 0.28125 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { 2.3125, 0.9375 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { 2.65625, 1.90625 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { -2.65625, 1.90625 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { -2.3125, 0.9375 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { -1.34375, 0.28125 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/07-red-lights-back/red-light.png",
+    --            width = 32,
+    --            height = 32,
+    --            shift = { 0, 0 - 1.375 },
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-back.png",
+    --            priority = "medium",
+    --            width = 128,
+    --            height = 150,
+    --            x = 3968,
+    --            animation_speed = 0.3,
+    --            shift = util.by_pixel(-53, -84),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/08-rocket-silo-arms-right.png",
+    --            priority = "medium",
+    --            width = 182,
+    --            height = 188,
+    --            x = 5642,
+    --            animation_speed = 0.3,
+    --            shift = util.by_pixel(101, -38),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/rocket-static-pod-shadow.png",
+    --            priority = "medium",
+    --            width = 738,
+    --            height = 214,
+    --            shift = util.by_pixel(160.5, 23.5),
+    --            draw_as_shadow = true,
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/rocket-static-pod.png",
+    --            priority = "medium",
+    --            width = 308,
+    --            height = 602,
+    --            shift = util.by_pixel(-4, -41.25),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/rocket-static-emission.png",
+    --            width = 306,
+    --            height = 518,
+    --            shift = util.by_pixel(-4, -4.25),
+    --            draw_as_glow = true,
+    --            blend_mode = "additive",
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/03-rocket-over-shadow-over-rocket.png",
+    --            width = 426,
+    --            height = 288,
+    --            shift = util.by_pixel(-2, 21),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__lignumis__/graphics/entity/wooden-rocket-silo/14-rocket-silo-front.png",
+    --            width = 580,
+    --            height = 262,
+    --            shift = util.by_pixel(-1, 78),
+    --            scale = 0.5
+    --        },
+    --        {
+    --            filename = "__base__/graphics/entity/rocket-silo/13-rocket-silo-arms-front.png",
+    --            priority = "medium",
+    --            width = 126,
+    --            height = 228,
+    --            x = 3906,
+    --            animation_speed = 0.3,
+    --            shift = util.by_pixel(-51, 16),
+    --            scale = 0.5
+    --        }
+    --    }
+    --},
+    collision_mask = { layers = {} },
+    collision_box = table.deepcopy(silo.collision_box),
+    selection_box = table.deepcopy(silo.selection_box),
 }
 
-local nauvis_recipe = {
-    type = "recipe",
-    name = "destination-nauvis",
-    enabled = false,
-    ingredients = {},
-    results = { { type = "item", name = "destination-nauvis", amount = 1 } }
-}
+local silo_ready_item = table.deepcopy(data.raw["item"]["rocket-silo"])
+silo_ready_item.name = "provisional-rocket-silo-ready"
+silo_ready_item.order = "0[provisional-rocket-silo-ready]"
+silo_ready_item.place_result = "provisional-rocket-silo-ready"
+silo_ready_item.icon = "__lignumis__/graphics/icons/provisional-rocket-silo.png"
 
 data:extend({
     silo,
@@ -121,6 +297,6 @@ data:extend({
     silo_recipe,
     rocket,
     rocket_part_recipe,
-    nauvis_item,
-    nauvis_recipe
+    silo_ready,
+    silo_ready_item
 })
