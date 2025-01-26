@@ -47,8 +47,8 @@ silo.fluid_boxes = {
 }
 silo.fluid_boxes_off_when_no_fluid_recipe = true
 silo.launch_to_space_platforms = false
-silo.rocket_parts_required = 1
-silo.rocket_parts_storage_cap = 1
+silo.rocket_parts_required = 50
+silo.rocket_parts_storage_cap = 50
 silo.to_be_inserted_to_rocket_inventory_size = 1
 silo.clamps_on_trigger = {
     type = "script",
