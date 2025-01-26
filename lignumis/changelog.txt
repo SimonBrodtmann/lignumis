@@ -2,7 +2,10 @@
 Version: 1.0.0
 Date: 26.01.2025
   Changes:
-    Add translations for simplified chinese (thanks cyx2015s)
+    - Add translations for simplified chinese (thanks cyx2015s)
+    - Improve transition to Nauvis with a compound entity and a custom GUI
+    - Polish custom graphics
+    - Optimize graphics, drastically reducing the overall file size
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.8
 Date: 25.01.2025

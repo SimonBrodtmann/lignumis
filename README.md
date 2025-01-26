@@ -83,8 +83,6 @@ Sorted by priority
 - Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
 - Add more description strings
-- Tweak all custom graphics colors
-- Optimize images
 - Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [Noble Metals](https://mods.factorio.com/mod/bzgold) once it's updated
