@@ -1,15 +1,16 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
+local gfx = "__lignumis__/graphics/entity/burner-agricultural-tower/"
+
 local agricultural_tower = table.deepcopy(data.raw["agricultural-tower"]["agricultural-tower"])
 agricultural_tower.name = "burner-agricultural-tower"
 agricultural_tower.minable.result = "burner-agricultural-tower"
 agricultural_tower.next_upgrade = "agricultural-tower"
 agricultural_tower.corpses = "burner-agricultural-tower-remnants"
 agricultural_tower.icon = "__lignumis__/graphics/icons/burner-agricultural-tower.png"
-agricultural_tower.graphics_set.animation.layers[1].filename =
-"__lignumis__/graphics/entity/burner-agricultural-tower-base.png"
-agricultural_tower.graphics_set.working_visualisations[1].animation.filename =
-"__lignumis__/graphics/entity/burner-agricultural-tower-base.png"
+agricultural_tower.graphics_set.animation.layers[1].filename = gfx .. "burner-agricultural-tower-base.png"
+agricultural_tower.graphics_set.working_visualisations[1].animation.filename = gfx ..
+"burner-agricultural-tower-base.png"
 agricultural_tower.energy_source = {
     type = "burner",
     fuel_categories = { "chemical" },
@@ -23,18 +24,18 @@ agricultural_tower.output_inventory_size = 3
 agricultural_tower.radius = 2
 
 local crane = agricultural_tower.crane
-crane.parts[1].rotated_sprite.filenames = { "__lignumis__/graphics/entity/burner-agricultural-tower-crane-1-1.png",
-    "__lignumis__/graphics/entity/burner-agricultural-tower-crane-1-2.png" }
-crane.parts[2].rotated_sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-3.png"
-crane.parts[3].rotated_sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-4.png"
-crane.parts[4].rotated_sprite.filenames = { "__lignumis__/graphics/entity/burner-agricultural-tower-crane-5-1.png",
-    "__lignumis__/graphics/entity/burner-agricultural-tower-crane-5-2.png" }
-crane.parts[5].rotated_sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-6.png"
-crane.parts[6].rotated_sprite.filenames = { "__lignumis__/graphics/entity/burner-agricultural-tower-crane-7-1.png",
-    "__lignumis__/graphics/entity/burner-agricultural-tower-crane-7-2.png" }
-crane.parts[7].rotated_sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-8.png"
-crane.parts[8].sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-9.png"
-crane.parts[9].sprite.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-crane-10.png"
+crane.parts[1].rotated_sprite.filenames = { gfx .. "burner-agricultural-tower-crane-1-1.png", gfx ..
+"burner-agricultural-tower-crane-1-2.png" }
+crane.parts[2].rotated_sprite.filename = gfx .. "burner-agricultural-tower-crane-3.png"
+crane.parts[3].rotated_sprite.filename = gfx .. "burner-agricultural-tower-crane-4.png"
+crane.parts[4].rotated_sprite.filenames = { gfx .. "burner-agricultural-tower-crane-5-1.png", gfx ..
+"burner-agricultural-tower-crane-5-2.png" }
+crane.parts[5].rotated_sprite.filename = gfx .. "burner-agricultural-tower-crane-6.png"
+crane.parts[6].rotated_sprite.filenames = { gfx .. "burner-agricultural-tower-crane-7-1.png", gfx ..
+"burner-agricultural-tower-crane-7-2.png" }
+crane.parts[7].rotated_sprite.filename = gfx .. "burner-agricultural-tower-crane-8.png"
+crane.parts[8].sprite.filename = gfx .. "burner-agricultural-tower-crane-9.png"
+crane.parts[9].sprite.filename = gfx .. "burner-agricultural-tower-crane-10.png"
 crane.speed = {
     arm = {
         turn_rate = 0.001,
@@ -51,7 +52,7 @@ crane.speed = {
 local remnants = table.deepcopy(data.raw["corpse"]["agricultural-tower-remnants"])
 remnants.name = "burner-agricultural-tower-remnants"
 remnants.icon = "__lignumis__/graphics/icons/burner-agricultural-tower.png"
-remnants.animation.filename = "__lignumis__/graphics/entity/burner-agricultural-tower-remnants.png"
+remnants.animation.filename = gfx .. "burner-agricultural-tower-remnants.png"
 remnants.order = "a[0-burner-agricultural-tower]"
 
 data:extend({
@@ -88,7 +89,7 @@ data:extend({
         name = "burner-agricultural-tower-electronic-circuit",
         icons = {
             { icon = "__lignumis__/graphics/icons/burner-agricultural-tower.png" },
-            { icon = "__base__/graphics/icons/electronic-circuit.png", scale = 0.25, shift = { 8, 8 } }
+            { icon = "__base__/graphics/icons/electronic-circuit.png",           scale = 0.25, shift = { 8, 8 } }
         },
         energy_required = 10,
         ingredients = {

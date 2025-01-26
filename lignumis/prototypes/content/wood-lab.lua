@@ -1,5 +1,7 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
+local gfx = "__lignumis__/graphics/entity/wood-lab/"
+
 data:extend({
     {
         type = "lab",
@@ -17,7 +19,7 @@ data:extend({
         on_animation = {
             layers = {
                 {
-                    filename = "__lignumis__/graphics/entity/wood-lab.png",
+                    filename = gfx .. "wood-lab.png",
                     width = 194,
                     height = 174,
                     frame_count = 33,
@@ -37,7 +39,7 @@ data:extend({
                     scale = 0.5
                 },
                 {
-                    filename = "__lignumis__/graphics/entity/wood-lab-light.png",
+                    filename = gfx .. "wood-lab-light.png",
                     blend_mode = "additive",
                     draw_as_light = true,
                     width = 216,
@@ -64,7 +66,7 @@ data:extend({
         off_animation = {
             layers = {
                 {
-                    filename = "__lignumis__/graphics/entity/wood-lab.png",
+                    filename = gfx .. "wood-lab.png",
                     width = 194,
                     height = 174,
                     shift = util.by_pixel(0, 1.5),

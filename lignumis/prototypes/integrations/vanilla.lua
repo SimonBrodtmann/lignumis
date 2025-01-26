@@ -8,10 +8,10 @@ drill.resource_searching_radius = 1.99
 drill.icon = "__lignumis__/graphics/icons/burner-mining-drill.png"
 drill.impact_category = "wood"
 drill.radius_visualisation_picture = table.deepcopy(data.raw["mining-drill"]["electric-mining-drill"].radius_visualisation_picture)
-drill_animation.north.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill-N.png"
-drill_animation.east.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill-E.png"
-drill_animation.south.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill-S.png"
-drill_animation.west.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill-W.png"
+drill_animation.north.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill/burner-mining-drill-N.png"
+drill_animation.east.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill/burner-mining-drill-E.png"
+drill_animation.south.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill/burner-mining-drill-S.png"
+drill_animation.west.layers[1].filename = "__lignumis__/graphics/entity/burner-mining-drill/burner-mining-drill-W.png"
 
 local drill_item = data.raw["item"]["burner-mining-drill"]
 drill_item.icon = "__lignumis__/graphics/icons/burner-mining-drill.png"
@@ -28,10 +28,10 @@ drill_recipe.ingredients = {
 
 local burner_inserter = data.raw["inserter"]["burner-inserter"]
 burner_inserter.icon = "__lignumis__/graphics/icons/burner-inserter.png"
-burner_inserter.hand_base_picture.filename = "__lignumis__/graphics/entity/burner-inserter-hand-base.png"
-burner_inserter.hand_closed_picture.filename = "__lignumis__/graphics/entity/burner-inserter-hand-closed.png"
-burner_inserter.hand_open_picture.filename = "__lignumis__/graphics/entity/burner-inserter-hand-open.png"
-burner_inserter.platform_picture.sheet.filename = "__lignumis__/graphics/entity/burner-inserter-platform.png"
+burner_inserter.hand_base_picture.filename = "__lignumis__/graphics/entity/burner-inserter/burner-inserter-hand-base.png"
+burner_inserter.hand_closed_picture.filename = "__lignumis__/graphics/entity/burner-inserter/burner-inserter-hand-closed.png"
+burner_inserter.hand_open_picture.filename = "__lignumis__/graphics/entity/burner-inserter/burner-inserter-hand-open.png"
+burner_inserter.platform_picture.sheet.filename = "__lignumis__/graphics/entity/burner-inserter/burner-inserter-platform.png"
 burner_inserter.energy_source.initial_fuel_percent = 0.15
 
 data.raw.item["burner-inserter"].icon = "__lignumis__/graphics/icons/burner-inserter.png"

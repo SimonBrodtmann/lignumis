@@ -1,6 +1,8 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 local pipecovers = require("prototypes/content/gold/pipecovers")
 
+local gfx = "__lignumis__/graphics/entity/steam-assembling-machine/"
+
 local assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"])
 assembling_machine.name = "steam-assembling-machine"
 assembling_machine.icon = "__lignumis__/graphics/icons/steam-assembling-machine.png"
@@ -11,7 +13,7 @@ assembling_machine.corpses = "steam-assembling-machine-remnants"
 assembling_machine.resistances = nil
 assembling_machine.graphics_set = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"].graphics_set)
 assembling_machine.graphics_set.animation.layers[1].filename =
-"__lignumis__/graphics/entity/steam-assembling-machine.png"
+gfx .. "steam-assembling-machine.png"
 assembling_machine.crafting_categories = {
     "crafting",
     "basic-crafting",
@@ -43,9 +45,9 @@ assembling_machine.energy_source = {
 local remnants = table.deepcopy(data.raw["corpse"]["assembling-machine-1-remnants"])
 remnants.name = "steam-assembling-machine-remnants"
 remnants.icon = "__lignumis__/graphics/icons/steam-assembling-machine.png"
-remnants.animation[1].filename = "__lignumis__/graphics/entity/steam-assembling-machine-remnants.png"
-remnants.animation[2].filename = "__lignumis__/graphics/entity/steam-assembling-machine-remnants.png"
-remnants.animation[3].filename = "__lignumis__/graphics/entity/steam-assembling-machine-remnants.png"
+remnants.animation[1].filename = gfx .. "steam-assembling-machine-remnants.png"
+remnants.animation[2].filename = gfx .. "steam-assembling-machine-remnants.png"
+remnants.animation[3].filename = gfx .. "steam-assembling-machine-remnants.png"
 remnants.order = "1[steam-assembling-machine]"
 
 data:extend({

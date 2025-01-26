@@ -1,5 +1,7 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
+local gfx = "__lignumis__/graphics/entity/burner-assembling-machine/"
+
 local assembling_machine = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"])
 assembling_machine.name = "burner-assembling-machine"
 assembling_machine.icon = "__lignumis__/graphics/icons/burner-assembling-machine.png"
@@ -8,7 +10,7 @@ assembling_machine.next_upgrade = "steam-assembling-machine"
 assembling_machine.corpse = "burner-assembling-machine-remnants"
 assembling_machine.resistances = nil
 assembling_machine.graphics_set.animation.layers[1].filename =
-"__lignumis__/graphics/entity/burner-assembling-machine.png"
+gfx .. "burner-assembling-machine.png"
 assembling_machine.crafting_categories = {
     "crafting",
     "basic-crafting",
@@ -38,9 +40,9 @@ assembling_machine.energy_usage = "75kW"
 local remnants = table.deepcopy(data.raw["corpse"]["assembling-machine-1-remnants"])
 remnants.name = "burner-assembling-machine-remnants"
 remnants.icon = "__lignumis__/graphics/icons/burner-assembling-machine.png"
-remnants.animation[1].filename = "__lignumis__/graphics/entity/burner-assembling-machine-remnants.png"
-remnants.animation[2].filename = "__lignumis__/graphics/entity/burner-assembling-machine-remnants.png"
-remnants.animation[3].filename = "__lignumis__/graphics/entity/burner-assembling-machine-remnants.png"
+remnants.animation[1].filename = gfx .. "burner-assembling-machine-remnants.png"
+remnants.animation[2].filename = gfx .. "burner-assembling-machine-remnants.png"
+remnants.animation[3].filename = gfx .. "burner-assembling-machine-remnants.png"
 remnants.order = "0[burner-assembling-machine]"
 
 data:extend({

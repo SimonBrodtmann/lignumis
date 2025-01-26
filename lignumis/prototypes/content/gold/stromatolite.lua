@@ -18,7 +18,7 @@ stromatolite.minable.results = {
 stromatolite.map_color = { 255, 171, 0, 0.5 }
 stromatolite.pictures = {
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-01.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-01.png",
         width = 209,
         height = 138,
         shift = { 0.304688, -0.4 },
@@ -26,105 +26,105 @@ stromatolite.pictures = {
 
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-02.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-02.png",
         width = 165,
         height = 129,
         shift = { 0.0, 0.0390625 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-03.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-03.png",
         width = 151,
         height = 139,
         shift = { 0.151562, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-04.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-04.png",
         width = 216,
         height = 110,
         shift = { 0.390625, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-05.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-05.png",
         width = 154,
         height = 147,
         shift = { 0.328125, 0.0703125 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-06.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-06.png",
         width = 154,
         height = 132,
         shift = { 0.16875, -0.1 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-07.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-07.png",
         width = 193,
         height = 130,
         shift = { 0.3, -0.2 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-08.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-08.png",
         width = 136,
         height = 117,
         shift = { 0.0, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-09.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-09.png",
         width = 157,
         height = 115,
         shift = { 0.1, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-10.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-10.png",
         width = 198,
         height = 153,
         shift = { 0.325, -0.1 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-11.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-11.png",
         width = 190,
         height = 115,
         shift = { 0.453125, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-12.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-12.png",
         width = 229,
         height = 126,
         shift = { 0.539062, -0.015625 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-13.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-13.png",
         width = 151,
         height = 125,
         shift = { 0.0703125, 0.179688 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-14.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-14.png",
         width = 137,
         height = 117,
         shift = { 0.160938, 0.0 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-15.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-15.png",
         width = 201,
         height = 141,
         shift = { 0.242188, -0.195312 },
         scale = 0.4
     },
     {
-        filename = "__lignumis__/graphics/entity/gold-stromatolite-16.png",
+        filename = "__lignumis__/graphics/entity/gold-stromatolite/gold-stromatolite-16.png",
         width = 209,
         height = 154,
         shift = { 0.351562, -0.1 },

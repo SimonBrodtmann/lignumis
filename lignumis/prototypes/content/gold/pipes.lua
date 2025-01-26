@@ -227,7 +227,7 @@ local tank = {
         picture = {
             sheets = {
                 {
-                    filename = "__lignumis__/graphics/entity/gold-storage-tank.png",
+                    filename = "__lignumis__/graphics/entity/gold-storage-tank/gold-storage-tank.png",
                     priority = "extra-high",
                     width = 128,
                     height = 160,
@@ -236,7 +236,7 @@ local tank = {
                     shift = util.by_pixel(0, -8)
                 },
                 {
-                    filename = "__lignumis__/graphics/entity/gold-storage-tank.png",
+                    filename = "__lignumis__/graphics/entity/gold-storage-tank/gold-storage-tank.png",
                     priority = "extra-high",
                     y = 160,
                     width = 160,
@@ -249,7 +249,7 @@ local tank = {
             }
         },
         window_background = {
-            filename = "__lignumis__/graphics/entity/gold-storage-tank-window-background.png",
+            filename = "__lignumis__/graphics/entity/gold-storage-tank/gold-storage-tank-window-background.png",
             priority = "extra-high",
             width = 20,
             height = 41,
@@ -376,7 +376,7 @@ local tank_remnants = {
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1,
         {
-            filename = "__lignumis__/graphics/entity/gold-storage-tank-remnants.png",
+            filename = "__lignumis__/graphics/entity/gold-storage-tank/gold-storage-tank-remnants.png",
             line_length = 1,
             width = 284,
             height = 188,
