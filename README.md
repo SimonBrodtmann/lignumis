@@ -32,6 +32,7 @@ For wood on the other planets.
 
 The following planet mods are tested for (at least technical) compatibility:
 
+- [Castra](https://mods.factorio.com/mod/castra)
 - [Cerys](https://mods.factorio.com/mod/Cerys-Moon-of-Fulgora)
 - [Corrundum](https://mods.factorio.com/mod/corrundum)
 - [Janus](https://mods.factorio.com/mod/janus)
