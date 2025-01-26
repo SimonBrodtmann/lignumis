@@ -80,6 +80,7 @@ If your modded lab is special and it should not support these science packs, use
 
 Sorted by priority
 
+- Rename moist-stromatolite-remnant to moist-biomass
 - Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
 - Add more description strings
@@ -87,6 +88,7 @@ Sorted by priority
 - Trees must not die when absorbing noise
     - https://lua-api.factorio.com/latest/types/TreeVariation.html
 - Improve transition to Nauvis a bit more
+- Add late-game recipe for oil from wood pulp
 - Compatibility with [Alien biomes](https://mods.factorio.com/mod/alien-biomes)
 - Compatibility with [Amator Phasma's Coal & Steam (forked)](https://mods.factorio.com/mod/apm_power_ldinc)
 - Compatibility with [AAI Industry](https://mods.factorio.com/mod/aai-industry)
