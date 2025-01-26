@@ -105,6 +105,12 @@ Sorted by priority
 
 ## Credits
 
+### Translations
+
+- zh-CN: cyx2015s
+
+### Assets
+
 [Hurricane](https://mods.factorio.com/user/Hurricane046)
 
 - Lumber mill
