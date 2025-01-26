@@ -59,6 +59,7 @@ local function on_gui_opened(event)
     if not entity or not entity.valid then return end
     if entity.name ~= "provisional-rocket-silo-ready" then return end
     local player = game.get_player(event.player_index)
+    if player.controller_type ~= defines.controllers.character then return end
 
     if player.gui.relative["provisional-rocket-silo-relative-frame"] then
         player.gui.relative["provisional-rocket-silo-relative-frame"].destroy()
