@@ -275,6 +275,11 @@ local utility_science_pack_technology = Technology:new("utility-science-pack")
 utility_science_pack_technology:setPrerequisites({ "space-platform-thruster" })
 utility_science_pack_technology:addIngredients({ "wood-science-pack", "steam-science-pack", "space-science-pack" })
 
+if not mods["planet-muluna"] then -- Muluna does the same
+    Technology:new("logistic-robotics"):addRecipe("requester-chest")
+    Technology:new("logistic-system"):removeRecipe("requester-chest")
+end
+
 
 -- Equipment
 
