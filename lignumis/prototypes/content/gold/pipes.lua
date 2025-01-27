@@ -127,8 +127,12 @@ pipe_to_ground.icon = "__lignumis__/graphics/icons/gold-pipe-to-ground.png"
 pipe_to_ground.corpse = "gold-pipe-to-ground-remnants"
 pipe_to_ground.next_upgrade = "pipe-to-ground"
 pipe_to_ground.fluid_box.volume = 50
-pipe_to_ground.fluid_box.pipe_connections[2].max_underground_distance = 6
 pipe_to_ground.minable.result = "gold-pipe-to-ground"
+for _, connection in pairs(pipe_to_ground.fluid_box.pipe_connections) do
+    if connection.connection_type == "underground" then
+        connection.max_underground_distance = 6
+    end
+end
 
 pipe_to_ground.fluid_box.pipe_covers.north.layers[1].filename =
 "__lignumis__/graphics/entity/gold-pipe/gold-pipe-cover-north.png"
