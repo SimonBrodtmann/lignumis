@@ -4,7 +4,7 @@ if not storage.rocket_silos then
     storage.rocket_silos = {}
 end
 
-if not game.planets["lignumis"] then return end
+if not game.planets["lignumis"] or not game.planets["lignumis"].surface then return end
 
 local lignumis = game.planets["lignumis"].surface
 
