@@ -30,7 +30,8 @@ end
 local function teleport_player(player)
     local nauvis = game.planets["nauvis"].surface
     if player.surface.name == "lignumis" then
-        player.teleport(nauvis.find_non_colliding_position("character", { 0, 0 }, 0, 1), "nauvis")
+        local position = nauvis.find_non_colliding_position("character", { 0, 0 }, 100, 1) or { 0, 0 }
+        player.teleport(position, "nauvis")
         chart_starting_area(nauvis, player)
         player.print("Oh no, not again. But... Welcome to Nauvis!")
     end
