@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 27.01.2025
+  Changes:
+    - Move requester chest to logistic robotics
+  Bug Fixes:
+    - Temporary fix for crash due to "Wood Walls and floors" (https://mods.factorio.com/mod/Wood-Walls/discussion/679915cbb8bf3c84c65db404)
+    - Fix error in migration code when Lignumis surface does not exist yet
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 27.01.2025
   Changes:
