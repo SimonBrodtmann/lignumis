@@ -148,3 +148,7 @@ Sorted by priority
 [Icons8](https://icons8.com)
 
 - [Mute icon](https://icons8.com/icon/9414/no-audio)
+
+[_CodeGreen](https://mods.factorio.com/user/_CodeGreen)
+
+- Lignumis as starting planet inspired by [Any Planet Start](https://mods.factorio.com/mod/any-planet-start)
