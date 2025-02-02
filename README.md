@@ -79,8 +79,6 @@ If your modded lab is special and it should not support these science packs, use
 
 ## Todo
 
-Sorted by priority
-
 - Rename moist-stromatolite-remnant to moist-biomass
 - Fix pipe graphics on desiccation furnace and quality assembler
 - Ban huge rocks with coal from Nauvis
