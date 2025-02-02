@@ -104,6 +104,7 @@ data:extend({
         },
         energy_required = 12.8,
         enabled = false,
+        auto_recycle = false,
         ingredients = { { type = "item", name = "cupriavidus-necator", amount = 100 } },
         results = {
             { type = "item",  name = "plastic-bar", amount_min = 1, amount_max = 20 },
@@ -130,6 +131,7 @@ data:extend({
         },
         energy_required = 12.8,
         enabled = false,
+        auto_recycle = false,
         ingredients = { { type = "item", name = "dead-cupriavidus-necator", amount = 100 } },
         results = {
             { type = "item",  name = "plastic-bar", amount_min = 1, amount_max = 14 },
@@ -152,6 +154,7 @@ data:extend({
         category = "crafting",
         energy_required = 15,
         enabled = false,
+        auto_recycle = false,
         ingredients = {
             { type = "item", name = "gold-plate",  amount = 20 },
             { type = "item", name = "plastic-bar", amount = 7 },
@@ -170,6 +173,7 @@ data:extend({
         category = "smelting",
         energy_required = 1,
         enabled = false,
+        auto_recycle = false,
         ingredients = { { type = "fluid", name = "wood-pulp", amount = 10 } },
         results = { { type = "item", name = "nutrients", amount = 5 } },
         allow_productivity = true,
@@ -184,6 +188,7 @@ data:extend({
         name = "rocket-fuel-from-wood-pulp-and-peat",
         energy_required = 15,
         enabled = false,
+        auto_recycle = false,
         category = "crafting-with-fluid",
         ingredients =
         {
