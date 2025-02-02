@@ -74,9 +74,22 @@ wood_processing.ingredients[1].amount = 1
 wood_processing.icon = data.raw.item["tree-seed"].icon
 
 for _, tree in pairs(data.raw.tree) do
+    local function isWoodResult(result)
+        return result.name == "wood"
+    end
+    local minable = tree.minable
+    local woodResults = minable.results and table.filter(minable.results, isWoodResult)
+    local isRegularTree = (minable.result == "wood" and minable.count == 4) or (#minable.results == 1 and #woodResults == 1 and woodResults[1].amount == 4)
+    if not isRegularTree then goto continue end
     tree.minable.result = nil
     tree.minable.count = nil
-    tree.minable.results = { { type = "item", name = "wood", amount_min = 2, amount_max = 10 } }
+    local woodResult = { type = "item", name = "wood", amount = nil, amount_min = 2, amount_max = 10 }
+    if #woodResults > 0 then
+        table.assign(woodResults[1], woodResult)
+    else
+        minable.results = { woodResult }
+    end
+    ::continue::
 end
 
 local tree_plant = data.raw.plant["tree-plant"]
