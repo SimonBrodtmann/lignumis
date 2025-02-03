@@ -1,6 +1,9 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 local item_tints = require("__base__.prototypes.item-tints")
 
+local vanilla_repair_pack = data.raw["repair-tool"]["repair-pack"]
+vanilla_repair_pack.default_import_location = vanilla_repair_pack.default_import_location or "nauvis"
+
 data:extend({
     {
         type = "repair-tool",
@@ -14,7 +17,8 @@ data:extend({
         speed = 1,
         durability = 150,
         stack_size = 100,
-        random_tint_color = item_tints.iron_rust
+        random_tint_color = item_tints.iron_rust,
+        default_import_location = "lignumis"
     },
     {
         type = "recipe",
